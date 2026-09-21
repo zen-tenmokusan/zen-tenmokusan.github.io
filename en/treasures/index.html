@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Treasures &amp; History — The Manichaean Figure Holding a Cross, and the Takeda Clan</title>
+<meta name="description" content="Seiunji 栖雲寺 holds a figure identified as Manichaean holding a cross (Yamanashi Prefecture designated cultural property), a seated statue of Zhongfeng Mingben (Important Cultural Property of Japan), and the iron war fan of Takeda Shingen. Founded 1348; burned 1582 at the fall of the Takeda clan.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   栖雲寺 英語サイト｜STONE
+   花崗閃緑岩の色と粒子を基調にした設計。
+   ・色面はフラットに置かず、ごく薄い粒子（SVGノイズ）を重ねて石の肌にする
+   ・罫はすべてヘアライン。箱で囲わず、線と余白で構造をつくる
+   ・金は年に数回しか使わない色として、差し色に限って置く
+   ・写真が主役。UI側は彩度を落として後ろに退かせる
+   ============================================================ */
+:root{
+  /* 岩 */
+  --stone-900:#1c1a17;   /* 最も濃い岩 ― フッター */
+  --stone-800:#26231f;   /* 濃い岩 ― ヘッダー */
+  --stone-700:#3a3630;
+  --stone-600:#514c44;
+  --stone-500:#6e6759;   /* 補助文字 */
+  --stone-400:#8d8576;
+  --stone-300:#b3aa99;
+  --stone-200:#cfc6b4;   /* 罫 */
+  --stone-100:#e5ddcd;
+  /* 紙 */
+  --paper:#f7f4ed;
+  --paper-2:#f0ebe0;
+  --ink:#2a2723;
+  /* 差し色 */
+  --gold:#9a7a38;
+  --gold-l:#c4a86a;
+  --moss:#5d6850;
+  /* 和紙の地 ― 3層で漉く
+     ①繊維（横に長く伸びる楮の繊維）②斑（漉きムラ）③細かい粒子 */
+  --washi-fiber:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.045 0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)'/%3E%3C/svg%3E");
+  --washi-cloud:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='700' height='700' filter='url(%23c)'/%3E%3C/svg%3E");
+  /* 花崗岩の粒子 */
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  /* 旧トークン名（既存の指定を壊さないため） */
+  --navy:#26231f; --navy-d:#1c1a17; --gold-b:#c4a86a;
+  --iwa:#6e6759; --tsuchi:#6e6759; --koke:#5d6850; --kin:#9a7a38; --kin-l:#c4a86a;
+  --sumi:#26231f; --sumi-d:#1c1a17;
+  --ink-l:#6e6759; --line:#cfc6b4; --bg:#f7f4ed; --bg-t:#f0ebe0;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Inter","Helvetica Neue",Arial,sans-serif;
+  font-size:16.5px;line-height:1.9;font-weight:300;letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;
+}
+/* 紙の肌 ― 画面全体にごく薄い粒子をかける */
+/* 和紙の地 ― 漉きムラ（下層）と繊維＋粒子（上層） */
+html::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background-image:var(--washi-cloud);background-size:700px 700px;
+  opacity:.075;mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background-image:var(--washi-fiber),var(--grain);
+  background-size:300px 300px,220px 220px;
+  opacity:.065;mix-blend-mode:multiply}
+img{max-width:100%;display:block}
+a{color:var(--stone-700);text-underline-offset:3px;text-decoration-thickness:.5px}
+a:hover{color:var(--gold)}
+strong{font-weight:500;color:#211e1a}
+.wrap{max-width:820px;margin:0 auto;padding:0 28px}
+
+/* ---------- 濃い岩の帯（粒子つき） ---------- */
+.hd,.nav,.ft{position:relative;isolation:isolate}
+.hd::after,.nav::after,.ft::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:var(--grain);background-size:220px 220px;
+  opacity:.12;mix-blend-mode:overlay;
+}
+
+/* ---------- ヘッダー ---------- */
+.hd{background:var(--stone-800);color:#efe9dd}
+.hd .in{max-width:1180px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.hd .bm{font-family:"Cormorant Garamond",serif;font-size:27px;letter-spacing:.26em;font-weight:300;
+  color:#f3eee3;text-decoration:none}
+.hd .bm span{font-family:"Noto Serif JP",serif;font-size:14px;letter-spacing:.2em;
+  color:var(--stone-300);margin-left:16px;font-weight:400}
+.hd .ja{font-size:10.5px;color:var(--stone-300);text-decoration:none;
+  border:.5px solid rgba(207,198,180,.4);padding:6px 15px;letter-spacing:.2em;white-space:nowrap;
+  text-transform:uppercase;transition:.2s}
+.hd .ja:hover{color:var(--stone-900);background:var(--stone-200);border-color:var(--stone-200)}
+
+/* ---------- ナビ ---------- */
+.nav{background:var(--stone-800);border-top:.5px solid rgba(207,198,180,.18)}
+.nav .in{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;
+  gap:0;justify-content:center}
+.nav a{position:relative;color:#ddd5c4;text-decoration:none;font-size:13px;font-weight:400;
+  letter-spacing:.16em;text-transform:uppercase;padding:19px 26px 18px;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav a+a::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:1px;height:12px;background:rgba(207,198,180,.22)}
+.nav a:hover{color:#fff}
+.nav a.on{color:#fff;border-bottom-color:var(--gold-l)}
+
+/* ---------- ページ見出しの帯 ---------- */
+.ph{position:relative;height:300px;overflow:hidden;background:var(--stone-700)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.ph .ov{position:absolute;inset:0;display:flex;align-items:flex-end;padding-bottom:44px;
+  background:linear-gradient(rgba(20,18,14,.06) 0%,rgba(20,18,14,.26) 42%,rgba(20,18,14,.78) 100%)}
+.ph h1{font-family:"Cormorant Garamond",serif;font-size:50px;font-weight:300;letter-spacing:.06em;
+  color:#f7f3ea;margin:0;line-height:1.15;text-shadow:0 1px 26px rgba(0,0,0,.45)}
+
+/* ---------- 本文 ---------- */
+main{padding:68px 0 24px}
+.lede{font-family:"Cormorant Garamond",serif;font-size:26px;line-height:1.66;font-weight:300;
+  color:#211e1a;margin:0 0 40px;letter-spacing:.005em}
+h2{font-family:"Cormorant Garamond",serif;font-size:35px;font-weight:300;letter-spacing:.02em;
+  color:#211e1a;margin:62px 0 6px;line-height:1.22;position:relative;padding-top:26px}
+h2::before{content:"";position:absolute;top:0;left:0;width:34px;height:1px;background:var(--gold)}
+h3{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:400;color:var(--stone-700);
+  margin:40px 0 10px;line-height:1.3}
+h4{font-size:11px;font-weight:500;color:var(--stone-500);margin:30px 0 8px;
+  letter-spacing:.28em;text-transform:uppercase}
+p{margin:0 0 20px}
+ul,ol{margin:0 0 22px;padding-left:20px}
+li{margin:7px 0;padding-left:4px}
+li::marker{color:var(--stone-400)}
+hr.sp{border:0;border-top:.5px solid var(--stone-200);margin:54px 0}
+blockquote{margin:30px 0;padding:6px 0 6px 26px;border-left:1px solid var(--gold);
+  font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.7;color:var(--stone-700)}
+code{background:var(--paper-2);padding:2px 7px;font-size:13px;
+  font-family:ui-monospace,Menlo,monospace;color:var(--stone-600)}
+
+/* ---------- 表：箱で囲わず、ヘアラインだけで組む ---------- */
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 30px;background:none}
+table th,table td{padding:15px 18px 14px;text-align:left;vertical-align:top;
+  border-bottom:.5px solid var(--stone-200)}
+table.tb thead th{background:none;color:var(--stone-500);font-weight:400;
+  font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+  padding-bottom:10px;border-bottom:1px solid var(--stone-700)}
+table.kv th{width:230px;font-weight:400;color:var(--stone-500);background:none;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding-top:17px}
+table tbody tr:hover td,table tbody tr:hover th{background:rgba(160,150,130,.055)}
+
+/* ---------- FAQ ---------- */
+h3.q{font-family:"Inter",sans-serif;font-size:17.5px;font-weight:500;color:#211e1a;
+  margin:0 0 14px;line-height:1.5;letter-spacing:0;display:flex;gap:14px}
+h3.q::before{content:"Q";font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--gold);
+  font-weight:400;flex:none;line-height:1.5}
+
+/* ---------- 未確定の印 ---------- */
+.tbc{display:inline-block;background:none;border:0;border-left:2px solid var(--gold);
+  padding:2px 0 2px 14px;margin:2px 0;font-size:13px;line-height:1.75;color:var(--stone-500);
+  font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+
+/* ---------- フッター ---------- */
+.ft{background:var(--stone-900);color:var(--stone-300);padding:64px 28px 46px;text-align:center;
+  font-size:13px;line-height:2.05;margin-top:84px;letter-spacing:.02em}
+.ft .nm{font-family:"Cormorant Garamond",serif;font-size:24px;letter-spacing:.26em;
+  color:#f3eee3;margin-bottom:6px;font-weight:300}
+.ft .nm span{font-family:"Noto Serif JP",serif;font-size:12px;letter-spacing:.24em;
+  color:var(--stone-400);display:block;margin-top:8px}
+.ft a{color:var(--stone-200)}
+.ft .lk{margin-top:32px;padding-top:28px;border-top:.5px solid rgba(207,198,180,.18);
+  display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center}
+.ft .lk a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  color:#cfc6b4;transition:.2s}
+.ft .lk a:hover{color:#fff}
+.ft .cp{margin-top:32px;font-size:10px;color:var(--stone-600);letter-spacing:.14em}
+
+@media(max-width:820px){
+  body{font-size:16px}
+  .ph{height:210px}.ph h1{font-size:30px}
+  h2{font-size:26px;margin-top:48px}h3{font-size:21px}.lede{font-size:20px}
+  main{padding:44px 0 12px}
+  .hd .in{flex-direction:column;gap:14px;padding:20px 24px}
+    .nav .in{gap:0;padding:0 10px}
+  .nav a{font-size:11.5px;letter-spacing:.06em;padding:13px 11px 12px}
+  .nav a+a::before{height:10px}
+  .wrap{padding:0 24px}
+  table.kv th{width:auto}
+  table,table thead,table tbody,table tr,table th,table td{display:block;width:100%}
+  table.tb thead{display:none}
+  table tr{border-bottom:.5px solid var(--stone-200);padding:10px 0}
+  table th,table td{border:0;padding:4px 0}
+  table.kv th{color:var(--stone-500);padding-bottom:2px}
+}
+
+</style>
+
+<link rel="icon" href="/en/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/en/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/en/apple-touch-icon.png">
+<meta name="theme-color" content="#26231f">
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<style id="proto-banner-css">
+.proto-bar{position:fixed;top:0;left:0;right:0;z-index:100000;background:#9a7a38;color:#fff;
+  font:500 12px/1 "Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;letter-spacing:.06em;
+  display:flex;align-items:center;justify-content:center;gap:14px;height:30px;padding:0 12px;
+  box-shadow:0 1px 8px rgba(0,0,0,.18)}
+.proto-bar b{font-weight:700;letter-spacing:.2em}
+.proto-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+html{scroll-padding-top:30px} body{padding-top:30px !important}
+@media(max-width:560px){.proto-bar{font-size:10.5px;gap:8px}.proto-bar .hide-s{display:none}}
+</style>
+</head>
+<body>
+<div class="proto-bar"><b>試作 PROTOTYPE</b><span>公式サイトではありません<span class="hide-s">／Not the official website</span></span><a href="/">一覧へ</a></div>
+
+<header class="hd"><div class="in">
+  <a class="bm" href="/en/">SEIUNJI<span>天目山 栖雲寺</span></a>
+  <a class="ja" href="/ja/">日本語</a>
+</div></header>
+<nav class="nav"><div class="in"><a href="/en/visit/">Visit</a><a href="/en/zazen/">Zazen</a><a href="/en/stay/">Stay</a><a href="/en/treasures/" class="on">Treasures</a><a href="/en/booking/">Booking</a></div></nav>
+
+<section class="ph">
+  <img src="/en/assets/fuounkokushi.jpg" alt="Seated statue of Zhongfeng Mingben">
+  <div class="ov"><div class="wrap">
+    <h1>Treasures & history</h1>
+  </div></div>
+</section>
+
+<main class="wrap">
+<p class="lede">Seiunji holds one object that has no straightforward parallel: a <strong>Yuan-dynasty Chinese painting on silk</strong>, designated a cultural property of Yamanashi Prefecture, in which Buddhist, Manichaean and Christian imagery appear together. This page sets out what is documented about it, and — equally important for anyone citing this page — what is not.</p>
+<hr class="sp">
+<h2><a id="manichaean-painting"></a>The painting of a figure holding a cross 絹本著色十字架捧持マニ像</h2>
+<table class="kv">
+<tbody>
+<tr><th><strong>Japanese designation name</strong></th><td>絹本著色十字架捧持マニ像　一幅 (<em>Kenpon-chakushoku Jūjika-hōji Mani-zō, ippuku</em>)</td></tr>
+<tr><th><strong>Status</strong></th><td>Designated <strong>Tangible Cultural Property of Yamanashi Prefecture</strong> (painting), <strong>11 July 2013</strong></td></tr>
+<tr><th><strong>Medium</strong></th><td><strong>Hanging scroll; ink and colour on silk</strong>, with extensive use of gold pigment. <strong>It is a painting, not a sculpture.</strong></td></tr>
+<tr><th><strong>Dimensions</strong></th><td><strong>153.3 × 58.7 cm</strong></td></tr>
+<tr><th><strong>Date</strong></th><td><strong>Yuan dynasty (13th–14th century)</strong> in the Japanese designation. Gulácsi (2009) proposes <strong>twelfth or thirteenth century</strong>.</td></tr>
+<tr><th><strong>Owner</strong></th><td>Seiunji</td></tr>
+<tr><th><strong>Location</strong></th><td><strong>On deposit at the Yamanashi Prefectural Museum</strong>, Fuefuki City. <strong>It is not normally at the temple.</strong></td></tr>
+</tbody></table>
+<h3>What is depicted</h3>
+<p>A single figure seated on a multi-tiered hexagonal lotus throne, with a head nimbus and a body halo, beneath a canopy. Hair falls in several strands over each shoulder. Over a pale violet inner robe the figure wears a white outer robe edged in gold and red. Four square cartouches — at both sides of the robe and at both knees — each contain the head of a crowned figure. The right hand is raised in a gesture resembling <em>abhaya</em>; <strong>the left hand holds a cross</strong>.</p>
+<h3>How it came to be called Manichaean</h3>
+<p>The box inscription reads <strong>Kokūzō Bosatsu</strong> 虚空蔵菩薩 (Ākāśagarbha), and for a long time the painting was transmitted under that name.</p>
+<table class="kv">
+<tbody>
+<tr><th><strong>2006</strong></th><td><strong>Izumi Takeo 泉武夫</strong>, “景教聖像の可能性 ─栖雲寺藏傳虚空藏畫像について”, <em>Kokka</em> 國華 1330, pp. 3–17 — proposes a <strong>Nestorian Christian (Jingjiao) icon</strong>.</td></tr>
+<tr><th><strong>2009</strong></th><td><strong>Zsuzsanna Gulácsi</strong>, “A Manichaean ‘Portrait of the Buddha Jesus’: Identifying a Twelfth- or Thirteenth-century Chinese Painting from the Collection of Seiun-ji Zen Temple”, <em>Artibus Asiae</em> <strong>69/1, pp. 91–144</strong> — identifies it as a <strong>Manichaean image of Jesus</strong>. This is the principal English-language study.</td></tr>
+<tr><th><strong>2010</strong></th><td><strong>Moriyasu Takao 森安孝夫</strong>, “日本に現存するマニ教絵画の発見とその歴史的背景”, <em>Inner Asian Studies</em> 内陸アジア史研究 25, pp. 1–29.</td></tr>
+<tr><th><strong>2015</strong></th><td><strong>Izumi Takeo</strong>, “栖雲寺画像をめぐって”, in Yoshida Yutaka & Furukawa Shōichi (eds.), <em>中国江南マニ教絵画研究</em>, Rinsen Shoten, pp. 183–195.</td></tr>
+</tbody></table>
+<p>The 2013 prefectural designation adopted the name <strong>Mani-zō</strong> following this scholarship. Note, however, that <strong>the prefecture’s own description keeps both readings</strong>, describing a “Mani figure holding a cross of the Greek-cross form (Nestorian Christianity)”. The administration has not settled on a single reading, and neither do we.</p>
+<p>In English the painting is often cited as the <strong>”Manichaean Painting of the Buddha Jesus”</strong> (Chinese <em>Yishu fo zhen</em> 夷數佛幀). That title follows Gulácsi’s identification; it is <strong>not</strong> a translation of the Japanese designation.</p>
+<h3>Provenance</h3>
+<p>The prefectural and national records set out <strong>two accounts and do not choose between them</strong>:</p>
+<ol>
+<li>Brought back from Yuan China by the founder <strong>Gōkai Honjō</strong>, who was in China from <strong>1318 to 1326</strong>.</li>
+<li>Owned by the Christian daimyo <strong>Arima Harunobu 有馬晴信</strong>, who is said to have acquired it in Kyushu as an image of Christ and to have brought it with him when he was exiled to Kai province in <strong>1612</strong>.</li>
+</ol>
+<h3>What this page does <strong>not</strong> claim</h3>
+<p>We set these limits deliberately, so that this page can be cited without being corrected.</p>
+<ul>
+<li>We do <strong>not</strong> claim a documented chain of transmission. Both accounts above are transmitted accounts, not established fact.</li>
+<li>We do <strong>not</strong> claim that the identification “Manichaean” is universally accepted. It is the name under which the work is designated in Japan, and the prefecture’s own wording preserves the Nestorian reading alongside it.</li>
+<li>We do <strong>not</strong> claim the painting is unique in the world — only that comparable cases are very few. Its re-identification is reported to have prompted the recognition of further Manichaean paintings in Japan.</li>
+</ul>
+<h3>Exhibition history</h3>
+
+<p><strong>Research enquiries:</strong> tenmokusan@gmail.com</p>
+<h3>Seeing it</h3>
+<p>The <strong>treasure hall is currently closed</strong> and this figure is <strong>not on general display</strong>. There are two points of access:</p>
+<ul>
+<li>A <strong>special goshuin 御朱印 of the Manichaean figure</strong> is issued on <strong>two days only in November</strong>, as a double-page spread, for an offering of <strong>¥800</strong>.</li>
+<li>During the <strong>soba festival</strong> (see below), the temple’s treasures are <strong>aired and displayed</strong> (<em>hōmotsu kazeire</em> 宝物風入れ展), and the head priest gives a <strong>talk on the treasures daily from 12:00 to 12:30</strong>.</li>
+</ul>
+<p>To enquire about viewing a cultural property outside those occasions, <strong>contact the temple in advance</strong>.</p>
+<hr class="sp">
+<h2>The other cultural properties</h2>
+<table class="tb">
+<thead><tr><th>Object</th><th>Designation</th></tr></thead>
+<tbody>
+<tr><td><strong>Seated statue of Zhongfeng Mingben 中峰明本坐像</strong> — also known as the statue of <strong>Fuō Kokushi 普応国師</strong>, the founder’s teacher at Mt. Tianmu</td><td><strong>Important Cultural Property of Japan</strong> (national)</td></tr>
+<tr><td><strong>Seated statue of Gōkai Honjō 業海本浄坐像</strong> — the founder</td><td>Yamanashi Prefecture</td></tr>
+<tr><td><strong>Figure holding a cross 十字架捧持マニ像</strong></td><td>Yamanashi Prefecture</td></tr>
+<tr><td><strong>Iron war fan of Takeda Shingen 信玄公鉄製軍配</strong> — weight <strong>3.2 kg</strong></td><td>Kōshū City</td></tr>
+
+<tr><td><strong>Takeda Fudōson 武田不動尊</strong></td><td><em>Hibutsu</em> 秘仏 — a hidden image, not normally shown</td></tr>
+<tr><td><strong>Kuri 庫裏 (kitchen-quarters), rebuilt 1592</strong></td><td>Yamanashi Prefecture</td></tr>
+</tbody></table>
+<p><strong>Note on current availability:</strong> during <strong>1 February – 31 May 2026</strong>, viewing of the temple’s cultural properties was suspended while objects were lent to the exhibition <em>Zen Buddhist Culture of Yamanashi</em> 「山梨の禅宗文化」 at the <strong>Yamanashi Prefectural Museum</strong>.</p>
+<p><strong>The Zen garden is open every day regardless.</strong> See <a href="/en/visit/">Visiting</a>.</p>
+<hr class="sp">
+<h2>History</h2>
+<p><strong>1318</strong> — Gōkai Honjō crosses to Yuan China.<br><strong>1326</strong> — He returns to Japan, having studied under Zhongfeng Mingben on Mt. Tianmu near Hangzhou. His movements for the next twenty-two years are unknown.<br><strong>1348 (Jōwa 4)</strong> — He founds Seiunji in a Yamanashi valley whose landscape resembles the Tianmu he had left, and names the mountain <strong>Tenmokusan</strong> 天目山 accordingly. He does not build a monastery around a garden; he takes the granite slope itself as the training ground.</p>
+<p><strong>Takeda Nobumitsu 武田信満</strong>, thirteenth head of the Takeda clan and six generations before Takeda Shingen, took his own life on Mt. Tenmoku. Seiunji became the clan’s memorial temple thereafter.</p>
+<p><strong>1582</strong> — <strong>Takeda Katsuyori 武田勝頼</strong>, the last head of the clan, is said by temple tradition to have made for Seiunji in his final retreat. Oda forces reach the temple ahead of him and <strong>burn it to the ground</strong>. Katsuyori turns back and takes his own life. The Takeda clan ends.</p>
+<p><strong>1592</strong> — With land granted by <strong>Tokugawa Ieyasu</strong>, the <strong>kuri</strong> 庫裏 is rebuilt. It still stands, more than four centuries later, and is a Yamanashi Prefecture designated cultural property.</p>
+<hr class="sp">
+<h2>The soba tradition</h2>
+<p>Seiunji describes itself as the <strong>birthplace of soba-kiri</strong> 蕎麦切り — cut buckwheat noodles, as opposed to earlier forms of buckwheat preparation.</p>
+<p><strong>According to temple tradition</strong>, Gōkai Honjō brought noodle-making technique back from Hangzhou. The claim is supported by a passage in <em><strong>Shiojiri</strong></em> 塩尻, written by <strong>Amano Sadakage</strong>, a retainer of the Owari domain.</p>
+<p>We state this as a tradition and a documentary reference, <strong>not as established fact</strong>. The origins of soba-kiri are disputed, and other sites make competing claims.</p>
+<p>The head priest makes the noodles himself at the temple’s soba events. A short film of this is on YouTube: <code>watch?v=mE9PDCBvy2Y</code></p>
+<hr class="sp">
+<h2>Annual calendar</h2>
+<table class="tb">
+<thead><tr><th>Month</th><th>Event</th></tr></thead>
+<tbody>
+<tr><td><strong>March</strong></td><td><strong>Genjū soba</strong> 幻住蕎麦 — sowing the buckwheat, and hand-cut <em>jūwari</em> (100% buckwheat) soba made by the head priest </td></tr>
+<tr><td><strong>April</strong></td><td><strong>Marishiten festival</strong> 摩利支天祭 — mid-month Sunday; the image is opened to view and a major prayer service is held </td></tr>
+<tr><td><strong>31 May 2026</strong></td><td><strong>Tenmokusan green-shade tea gathering</strong> 緑陰の茶会 — 9:00–12:00, offering ¥1,500</td></tr>
+<tr><td><strong>June</strong></td><td><strong>Tenmokusan tea gathering</strong> 天目山茶会 — first Sunday</td></tr>
+<tr><td><strong>27 July</strong></td><td><strong>Founder’s memorial day</strong> 開山忌 — service at 10:00</td></tr>
+<tr><td><strong>First Sunday of October</strong></td><td><strong>Sanmon dai-segaki-e</strong> 山門大施餓鬼会</td></tr>
+<tr><td><strong>7–8 November 2026 (Sat–Sun)</strong></td><td><strong>Soba festival</strong> 蕎麦まつり — 9:00–15:00, offering <strong>¥1,000</strong>. Treasure airing display, tea service, soba served, <strong>the head priest’s treasure talk daily 12:00–12:30</strong>, and the <strong>Manichaean figure special goshuin</strong>.</td></tr>
+<tr><td><strong>December</strong></td><td><strong>Zazen at Daibosatsu Pass</strong> 大菩薩峠坐禅 </td></tr>
+<tr><td><strong>Last Sunday, every month</strong></td><td><strong>Monthly zazen</strong> — see <a href="/en/zazen/">Zazen</a></td></tr>
+</tbody></table>
+<hr class="sp">
+<h2>Media and references</h2>
+<ul>
+<li><strong>Head priest’s blog</strong> (Japanese): <code>blog.livedoor.jp/tenmokusan/</code></li>
+<li><strong>Rock zazen promotional film</strong>, produced by Toppan Printing: Vimeo <code>486663407</code></li>
+<li><strong>The head priest making soba</strong>: YouTube <code>watch?v=mE9PDCBvy2Y</code></li>
+<li><strong>Film location:</strong> the kuri was used in the feature film <em>Ōi, Ōi</em> 『おーい、応為』, released in Japan on 17 October 2025 </li>
+</ul>
+<p><strong>Citing this page:</strong> Tenmokusan Seiunji, “Treasures & History”, <code>https://www.tenmokusan.or.jp/en/treasures/</code></p>
+</main>
+
+<footer class="ft">
+  <div class="nm">SEIUNJI<span>臨済宗建長寺派　天目山　栖雲寺</span></div>
+  122 Tokusa, Yamato-chō, Kōshū City, Yamanashi 409-1201, Japan<br>
+  〒409-1201 山梨県甲州市大和町木賊122<br>
+  +81 553-48-2797　／　<a href="mailto:tenmokusan@gmail.com">tenmokusan@gmail.com</a><br>
+  Stone garden open daily 8:00–17:00　／　Admission ¥300 (cash, honour box)
+  <div class="lk">
+    <a href="/en/">Home</a><a href="/en/visit/">Visit</a><a href="/en/access/">Getting here</a>
+    <a href="/en/zazen/">Zazen</a><a href="/en/stay/">Stay</a><a href="/en/treasures/">Treasures</a>
+    <a href="/en/etiquette/">Etiquette</a><a href="/en/faq/">FAQ</a><a href="/en/booking/">Booking</a>
+    <a href="/ja/">日本語</a>
+  </div>
+  <div class="cp">(C) 2020 SEIUNJI ALL RIGHTS RESERVED.</div>
+</footer>
+</body>
+</html>

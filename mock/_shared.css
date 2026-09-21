@@ -1,0 +1,67 @@
+/* ============================================================
+   天目山栖雲寺 改修案 共通スタイル
+   本番サイト（BiNDup）から抽出した実際の配色に合わせています。
+     ネイビー #12467b … ヘッダー・ナビ・フッター
+     ゴールド #ffc200 … 差し色
+     本文     #333333 ／ 背景 #ffffff
+   ============================================================ */
+:root{
+  --navy:#12467b; --navy-d:#0d3560; --gold:#ffc200;
+  --ink:#333; --ink-l:#6b6b6b; --line:#dcdcdc; --bg:#fff; --bg-t:#f5f3ee;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;
+  font-size:15px;line-height:1.9;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--navy)}
+
+/* --- ヘッダー --- */
+.hd{background:var(--navy);color:#fff;text-align:center;padding:26px 16px 0;position:relative}
+.hd .lang{position:absolute;left:12px;top:12px;font-size:11px;background:#fff;color:var(--navy);
+  padding:4px 10px;border-radius:2px;text-decoration:none;letter-spacing:.06em}
+.hd .logo{font-family:"Noto Serif JP","Yu Mincho",serif;font-size:34px;letter-spacing:.22em;
+  margin:0;font-weight:500}
+.hd .ruby{font-size:11px;letter-spacing:.5em;opacity:.85;margin:0 0 2px}
+.hd .tag{font-size:13px;letter-spacing:.3em;margin:6px 0 20px;opacity:.95}
+.nav{background:var(--navy);display:flex;flex-wrap:wrap;justify-content:center;
+  gap:0 22px;padding:10px 16px 14px;border-top:1px solid rgba(255,255,255,.15)}
+.nav a{color:#fff;text-decoration:none;font-size:12.5px;letter-spacing:.05em;padding:3px 0;white-space:nowrap}
+.nav a:hover{border-bottom:1px solid var(--gold)}
+.nav a.new{color:var(--gold)}
+
+/* --- 共通パーツ --- */
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.sec{padding:52px 0}
+.sec.tint{background:var(--bg-t)}
+h2.t{font-family:"Noto Serif JP",serif;font-size:26px;color:var(--navy);text-align:center;
+  margin:0 0 6px;letter-spacing:.12em;font-weight:500}
+.sub{text-align:center;font-size:12px;color:var(--ink-l);letter-spacing:.2em;margin:0 0 34px}
+.btn{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;
+  padding:12px 30px;font-size:14px;letter-spacing:.08em;border-radius:2px}
+.btn.g{background:var(--gold);color:#3a2c00}
+
+/* --- フッター --- */
+.ft-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 20px;padding:26px 20px;border-top:1px solid var(--line)}
+.ft-nav a{color:var(--ink);text-decoration:none;font-size:12px}
+.ft{background:var(--navy);color:#fff;text-align:center;padding:30px 20px;font-size:12.5px;line-height:2}
+.ft .nm{font-size:14px;letter-spacing:.2em;margin-bottom:8px}
+.ft a{color:#fff}
+
+/* --- 注釈トグル --- */
+.anno{display:none}
+body.show-anno .anno{display:block}
+.anno{background:#fff8e6;border-left:4px solid var(--gold);padding:10px 14px;margin:10px 0;
+  font-size:12.5px;line-height:1.8;color:#5a4a10}
+.anno b{color:#8a6d00}
+.annobar{position:fixed;right:14px;bottom:14px;z-index:99}
+.annobar button{background:var(--navy);color:#fff;border:0;padding:11px 18px;border-radius:3px;
+  font-size:13px;cursor:pointer;font-family:inherit;box-shadow:0 2px 10px rgba(0,0,0,.3)}
+body.show-anno .annobar button{background:var(--gold);color:#3a2c00}
+@media(max-width:700px){
+  .hd .logo{font-size:25px;letter-spacing:.15em}
+  .nav{gap:0 14px} .nav a{font-size:11.5px}
+  .sec{padding:38px 0} h2.t{font-size:21px}
+}

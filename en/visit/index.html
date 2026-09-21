@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visiting Seiunji — Hours, Admission and the Stone Garden</title>
+<meta name="description" content="The stone garden of Seiunji 栖雲寺 is open daily 8:00–17:00. Admission ¥300 by honour box. Allow about 30 minutes to walk the garden, a prefecturally designated historic site at 1,050 m. What to see, and what is currently closed.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   栖雲寺 英語サイト｜STONE
+   花崗閃緑岩の色と粒子を基調にした設計。
+   ・色面はフラットに置かず、ごく薄い粒子（SVGノイズ）を重ねて石の肌にする
+   ・罫はすべてヘアライン。箱で囲わず、線と余白で構造をつくる
+   ・金は年に数回しか使わない色として、差し色に限って置く
+   ・写真が主役。UI側は彩度を落として後ろに退かせる
+   ============================================================ */
+:root{
+  /* 岩 */
+  --stone-900:#1c1a17;   /* 最も濃い岩 ― フッター */
+  --stone-800:#26231f;   /* 濃い岩 ― ヘッダー */
+  --stone-700:#3a3630;
+  --stone-600:#514c44;
+  --stone-500:#6e6759;   /* 補助文字 */
+  --stone-400:#8d8576;
+  --stone-300:#b3aa99;
+  --stone-200:#cfc6b4;   /* 罫 */
+  --stone-100:#e5ddcd;
+  /* 紙 */
+  --paper:#f7f4ed;
+  --paper-2:#f0ebe0;
+  --ink:#2a2723;
+  /* 差し色 */
+  --gold:#9a7a38;
+  --gold-l:#c4a86a;
+  --moss:#5d6850;
+  /* 和紙の地 ― 3層で漉く
+     ①繊維（横に長く伸びる楮の繊維）②斑（漉きムラ）③細かい粒子 */
+  --washi-fiber:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.045 0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)'/%3E%3C/svg%3E");
+  --washi-cloud:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='700' height='700' filter='url(%23c)'/%3E%3C/svg%3E");
+  /* 花崗岩の粒子 */
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+
+  /* 旧トークン名（既存の指定を壊さないため） */
+  --navy:#26231f; --navy-d:#1c1a17; --gold-b:#c4a86a;
+  --iwa:#6e6759; --tsuchi:#6e6759; --koke:#5d6850; --kin:#9a7a38; --kin-l:#c4a86a;
+  --sumi:#26231f; --sumi-d:#1c1a17;
+  --ink-l:#6e6759; --line:#cfc6b4; --bg:#f7f4ed; --bg-t:#f0ebe0;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Inter","Helvetica Neue",Arial,sans-serif;
+  font-size:16.5px;line-height:1.9;font-weight:300;letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;
+}
+/* 紙の肌 ― 画面全体にごく薄い粒子をかける */
+/* 和紙の地 ― 漉きムラ（下層）と繊維＋粒子（上層） */
+html::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background-image:var(--washi-cloud);background-size:700px 700px;
+  opacity:.075;mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background-image:var(--washi-fiber),var(--grain);
+  background-size:300px 300px,220px 220px;
+  opacity:.065;mix-blend-mode:multiply}
+img{max-width:100%;display:block}
+a{color:var(--stone-700);text-underline-offset:3px;text-decoration-thickness:.5px}
+a:hover{color:var(--gold)}
+strong{font-weight:500;color:#211e1a}
+.wrap{max-width:820px;margin:0 auto;padding:0 28px}
+
+/* ---------- 濃い岩の帯（粒子つき） ---------- */
+.hd,.nav,.ft{position:relative;isolation:isolate}
+.hd::after,.nav::after,.ft::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:var(--grain);background-size:220px 220px;
+  opacity:.12;mix-blend-mode:overlay;
+}
+
+/* ---------- ヘッダー ---------- */
+.hd{background:var(--stone-800);color:#efe9dd}
+.hd .in{max-width:1180px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.hd .bm{font-family:"Cormorant Garamond",serif;font-size:27px;letter-spacing:.26em;font-weight:300;
+  color:#f3eee3;text-decoration:none}
+.hd .bm span{font-family:"Noto Serif JP",serif;font-size:14px;letter-spacing:.2em;
+  color:var(--stone-300);margin-left:16px;font-weight:400}
+.hd .ja{font-size:10.5px;color:var(--stone-300);text-decoration:none;
+  border:.5px solid rgba(207,198,180,.4);padding:6px 15px;letter-spacing:.2em;white-space:nowrap;
+  text-transform:uppercase;transition:.2s}
+.hd .ja:hover{color:var(--stone-900);background:var(--stone-200);border-color:var(--stone-200)}
+
+/* ---------- ナビ ---------- */
+.nav{background:var(--stone-800);border-top:.5px solid rgba(207,198,180,.18)}
+.nav .in{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;
+  gap:0;justify-content:center}
+.nav a{position:relative;color:#ddd5c4;text-decoration:none;font-size:13px;font-weight:400;
+  letter-spacing:.16em;text-transform:uppercase;padding:19px 26px 18px;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav a+a::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:1px;height:12px;background:rgba(207,198,180,.22)}
+.nav a:hover{color:#fff}
+.nav a.on{color:#fff;border-bottom-color:var(--gold-l)}
+
+/* ---------- ページ見出しの帯 ---------- */
+.ph{position:relative;height:300px;overflow:hidden;background:var(--stone-700)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.ph .ov{position:absolute;inset:0;display:flex;align-items:flex-end;padding-bottom:44px;
+  background:linear-gradient(rgba(20,18,14,.06) 0%,rgba(20,18,14,.26) 42%,rgba(20,18,14,.78) 100%)}
+.ph h1{font-family:"Cormorant Garamond",serif;font-size:50px;font-weight:300;letter-spacing:.06em;
+  color:#f7f3ea;margin:0;line-height:1.15;text-shadow:0 1px 26px rgba(0,0,0,.45)}
+
+/* ---------- 本文 ---------- */
+main{padding:68px 0 24px}
+.lede{font-family:"Cormorant Garamond",serif;font-size:26px;line-height:1.66;font-weight:300;
+  color:#211e1a;margin:0 0 40px;letter-spacing:.005em}
+h2{font-family:"Cormorant Garamond",serif;font-size:35px;font-weight:300;letter-spacing:.02em;
+  color:#211e1a;margin:62px 0 6px;line-height:1.22;position:relative;padding-top:26px}
+h2::before{content:"";position:absolute;top:0;left:0;width:34px;height:1px;background:var(--gold)}
+h3{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:400;color:var(--stone-700);
+  margin:40px 0 10px;line-height:1.3}
+h4{font-size:11px;font-weight:500;color:var(--stone-500);margin:30px 0 8px;
+  letter-spacing:.28em;text-transform:uppercase}
+p{margin:0 0 20px}
+ul,ol{margin:0 0 22px;padding-left:20px}
+li{margin:7px 0;padding-left:4px}
+li::marker{color:var(--stone-400)}
+hr.sp{border:0;border-top:.5px solid var(--stone-200);margin:54px 0}
+blockquote{margin:30px 0;padding:6px 0 6px 26px;border-left:1px solid var(--gold);
+  font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.7;color:var(--stone-700)}
+code{background:var(--paper-2);padding:2px 7px;font-size:13px;
+  font-family:ui-monospace,Menlo,monospace;color:var(--stone-600)}
+
+/* ---------- 表：箱で囲わず、ヘアラインだけで組む ---------- */
+table{width:100%;border-collapse:collapse;font-size:15px;margin:10px 0 30px;background:none}
+table th,table td{padding:15px 18px 14px;text-align:left;vertical-align:top;
+  border-bottom:.5px solid var(--stone-200)}
+table.tb thead th{background:none;color:var(--stone-500);font-weight:400;
+  font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;
+  padding-bottom:10px;border-bottom:1px solid var(--stone-700)}
+table.kv th{width:230px;font-weight:400;color:var(--stone-500);background:none;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding-top:17px}
+table tbody tr:hover td,table tbody tr:hover th{background:rgba(160,150,130,.055)}
+
+/* ---------- FAQ ---------- */
+h3.q{font-family:"Inter",sans-serif;font-size:17.5px;font-weight:500;color:#211e1a;
+  margin:0 0 14px;line-height:1.5;letter-spacing:0;display:flex;gap:14px}
+h3.q::before{content:"Q";font-family:"Cormorant Garamond",serif;font-size:19px;color:var(--gold);
+  font-weight:400;flex:none;line-height:1.5}
+
+/* ---------- 未確定の印 ---------- */
+.tbc{display:inline-block;background:none;border:0;border-left:2px solid var(--gold);
+  padding:2px 0 2px 14px;margin:2px 0;font-size:13px;line-height:1.75;color:var(--stone-500);
+  font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+
+/* ---------- フッター ---------- */
+.ft{background:var(--stone-900);color:var(--stone-300);padding:64px 28px 46px;text-align:center;
+  font-size:13px;line-height:2.05;margin-top:84px;letter-spacing:.02em}
+.ft .nm{font-family:"Cormorant Garamond",serif;font-size:24px;letter-spacing:.26em;
+  color:#f3eee3;margin-bottom:6px;font-weight:300}
+.ft .nm span{font-family:"Noto Serif JP",serif;font-size:12px;letter-spacing:.24em;
+  color:var(--stone-400);display:block;margin-top:8px}
+.ft a{color:var(--stone-200)}
+.ft .lk{margin-top:32px;padding-top:28px;border-top:.5px solid rgba(207,198,180,.18);
+  display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center}
+.ft .lk a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  color:#cfc6b4;transition:.2s}
+.ft .lk a:hover{color:#fff}
+.ft .cp{margin-top:32px;font-size:10px;color:var(--stone-600);letter-spacing:.14em}
+
+@media(max-width:820px){
+  body{font-size:16px}
+  .ph{height:210px}.ph h1{font-size:30px}
+  h2{font-size:26px;margin-top:48px}h3{font-size:21px}.lede{font-size:20px}
+  main{padding:44px 0 12px}
+  .hd .in{flex-direction:column;gap:14px;padding:20px 24px}
+    .nav .in{gap:0;padding:0 10px}
+  .nav a{font-size:11.5px;letter-spacing:.06em;padding:13px 11px 12px}
+  .nav a+a::before{height:10px}
+  .wrap{padding:0 24px}
+  table.kv th{width:auto}
+  table,table thead,table tbody,table tr,table th,table td{display:block;width:100%}
+  table.tb thead{display:none}
+  table tr{border-bottom:.5px solid var(--stone-200);padding:10px 0}
+  table th,table td{border:0;padding:4px 0}
+  table.kv th{color:var(--stone-500);padding-bottom:2px}
+}
+
+</style>
+
+<link rel="icon" href="/en/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/en/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/en/apple-touch-icon.png">
+<meta name="theme-color" content="#26231f">
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<style id="proto-banner-css">
+.proto-bar{position:fixed;top:0;left:0;right:0;z-index:100000;background:#9a7a38;color:#fff;
+  font:500 12px/1 "Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;letter-spacing:.06em;
+  display:flex;align-items:center;justify-content:center;gap:14px;height:30px;padding:0 12px;
+  box-shadow:0 1px 8px rgba(0,0,0,.18)}
+.proto-bar b{font-weight:700;letter-spacing:.2em}
+.proto-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+html{scroll-padding-top:30px} body{padding-top:30px !important}
+@media(max-width:560px){.proto-bar{font-size:10.5px;gap:8px}.proto-bar .hide-s{display:none}}
+</style>
+</head>
+<body>
+<div class="proto-bar"><b>試作 PROTOTYPE</b><span>公式サイトではありません<span class="hide-s">／Not the official website</span></span><a href="/">一覧へ</a></div>
+
+<header class="hd"><div class="in">
+  <a class="bm" href="/en/">SEIUNJI<span>天目山 栖雲寺</span></a>
+  <a class="ja" href="/ja/">日本語</a>
+</div></header>
+<nav class="nav"><div class="in"><a href="/en/visit/" class="on">Visit</a><a href="/en/zazen/">Zazen</a><a href="/en/stay/">Stay</a><a href="/en/treasures/">Treasures</a><a href="/en/booking/">Booking</a></div></nav>
+
+<section class="ph">
+  <img src="/en/assets/zazen-rock-wide.jpg" alt="Sitting among the boulders of the Zen garden">
+  <div class="ov"><div class="wrap">
+    <h1>Visiting</h1>
+  </div></div>
+</section>
+
+<main class="wrap">
+<p class="lede">There is no ticket window. You walk up, drop ¥300 into a wooden box, and go in. On most days there will be nobody else on the slope — only granite, moss, and whatever the weather is doing at 1,050 metres.</p>
+<hr class="sp">
+<h2>Hours and admission</h2>
+<table class="kv">
+<tbody>
+<tr><th><strong>Open</strong></th><td>Daily, <strong>8:00 – 17:00</strong> (stone garden and cemetery)</td></tr>
+<tr><th><strong>Admission</strong></th><td><strong>¥300</strong> per person</td></tr>
+<tr><th><strong>How to pay</strong></th><td><strong>Self-service.</strong> Put the fee in the honour box at the entrance. There is no attendant.</td></tr>
+<tr><th><strong>Reservation</strong></th><td>Not required for the garden</td></tr>
+<tr><th><strong>Time needed</strong></th><td>About <strong>30 minutes</strong> to walk the garden at an unhurried pace</td></tr>
+</tbody></table>
+<p>Please bring <strong>coins</strong>. There is no change machine, no card reader and no one to make change.</p>
+<hr class="sp">
+<h2>What you are walking through</h2>
+<p>The <strong>Zen garden</strong> (<strong>zentei</strong> 禅庭, also called the <strong>stone garden</strong>, <strong>sekitei</strong> 石庭) is a <strong>Place of Scenic Beauty designated by Yamanashi Prefecture</strong> (meishō 名勝, designated 31 March 1979 as <em>Seiunji Teien</em> 棲雲寺庭園). It is not a raked gravel garden of the kind found in Kyoto temple courtyards. It is the mountainside itself: an expanse of granite boulders, some the size of rooms, threaded by paths and steps.</p>
+<p>This is the temple. When Gōkai Honjō 業海本浄 founded Seiunji in 1348, he took the rock field as the training ground rather than clearing it to build on. Seven hundred years later it is still used that way. Three forms of practice are named after its features:</p>
+<ul>
+<li><strong>Rock zazen 岩坐禅</strong> — sitting on the boulders, in the open</li>
+<li><strong>Cave zazen 岩窟坐禅</strong> — sitting inside the rock hollows</li>
+<li><strong>Zazen beneath the trees 樹下坐禅</strong></li>
+</ul>
+<p>If you would like to sit rather than only look, see <strong><a href="/en/zazen/">Zazen & Zen practice</a></strong>.</p>
+<hr class="sp">
+<h2>Points to look for</h2>
+<p><strong>The Jizō cliff carving 地蔵磨崖仏</strong><br>A figure of Jizō carved directly into the rock face within the grounds.</p>
+<p><strong>The kuri 庫裏 (temple kitchen-quarters)</strong><br>Rebuilt in <strong>1592</strong> on land granted by Tokugawa Ieyasu after the temple was burned in 1582, and still standing — over four centuries old. A <strong>Yamanashi Prefecture designated cultural property</strong>. It was used as a location in the feature film <em>Ōi, Ōi</em> 『おーい、応為』, released in Japan on 17 October 2025.</p>
+<p><strong>The Takeda cemetery</strong><br>Seiunji is the memorial temple of the Takeda clan. See <strong><a href="/en/treasures/">Treasures & history</a></strong>.</p>
+<p><strong>The view</strong><br>At 1,050 m, in a valley that the founder chose because it reminded him of Mt. Tianmu near Hangzhou.</p>
+<hr class="sp">
+<h2>Rest house and toilets</h2>
+<p><strong>Sekitei Kaikan 石庭会館</strong>, next to the garden, is a <strong>free rest house managed by Kōshū City</strong>. It has <strong>toilets</strong>.</p>
+<ul>
+<li>Typical opening: <strong>approximately 9:00–16:00</strong></li>
+
+</ul>
+<p>There are <strong>no shops, no vending machines and no restaurants at the bus stop</strong>. Bring water and something to eat. See <strong><a href="/en/etiquette/">Etiquette & what to bring</a></strong>.</p>
+<hr class="sp">
+<h2>Currently closed / limited</h2>
+<p><strong>The treasure hall is closed.</strong> The temple’s cultural properties are <strong>not on general display</strong> at present.</p>
+<ul>
+<li>To ask about viewing a specific cultural property, <strong>contact the temple in advance</strong>: tenmokusan@gmail.com / 0553-48-2797</li>
+<li>During <strong>1 February – 31 May 2026</strong>, viewing of the temple’s cultural properties was suspended while objects were lent to the exhibition <em>Zen Buddhist Culture of Yamanashi</em> 「山梨の禅宗文化」 at the <strong>Yamanashi Prefectural Museum</strong>.</li>
+
+</ul>
+<p><strong>The Zen garden remains open every day</strong>, including during periods when the treasures are unavailable. If you are coming for the garden, nothing above affects you.</p>
+<p>The <strong>hidden Buddha, Takeda Fudō</strong> 武田不動尊, is a <em>hibutsu</em> — an image not shown to the public except on specific occasions.</p>
+<hr class="sp">
+<h2>Goshuin 御朱印 (temple seals)</h2>
+<p>Six standard goshuin are available, <strong>¥300 each</strong>:</p>
+<ul>
+<li>Hōkan Shaka Nyorai 宝冠釈迦如来</li>
+<li>Jizō cliff carving 地蔵磨崖佛</li>
+<li>Sobatō Kannon 蕎麦祷観音</li>
+<li>Takeda Fudōson 武田不動尊</li>
+<li>Marishiten 摩利支尊天</li>
+<li>Myōken Bosatsu 妙見大菩薩</li>
+</ul>
+<p>When the head priest is at the temple, these are <strong>brushed by hand</strong>. When he is away, pre-written sheets are available from the seal box on a <strong>self-service</strong> basis.</p>
+<p>Special versions:</p>
+<ul>
+<li><strong>Sobatō Kannon, coloured</strong>, double-page spread — <strong>¥800</strong> (postal order accepted)</li>
+<li><strong>Marishiten, watermarked</strong>, on its own mount only — <strong>¥500</strong></li>
+<li><strong>Manichaean figure special goshuin</strong>, double-page spread — offering <strong>¥800</strong>, issued on <strong>two days only in November</strong></li>
+</ul>
+<hr class="sp">
+<h2>Items available at the temple</h2>
+<table class="tb">
+<thead></thead>
+<tbody>
+<tr><td>Marishiten prayer tablet 摩利支天祈祷札</td><td>¥1,000</td></tr>
+<tr><td>Migawari protective amulet 身代り御守</td><td>¥600</td></tr>
+<tr><td>Katsu-mamori 勝守 (black / red)</td><td>¥700 each</td></tr>
+<tr><td>Omikuji amulet おみくじ御守</td><td>¥800</td></tr>
+<tr><td>Goshuin with temple image お姿入り御朱印</td><td>¥500</td></tr>
+<tr><td>White fan with Zen calligraphy 禅語白扇</td><td>¥500</td></tr>
+<tr><td>Prayer fan 祈祷うちわ</td><td>¥500</td></tr>
+<tr><td>Incense 線香</td><td>¥600</td></tr>
+
+</tbody></table>
+<p><strong>Formal prayer service 御祈祷</strong> at the Marishiten hall — <strong>¥5,000</strong>, by advance reservation.</p>
+<hr class="sp">
+<h2>Next</h2>
+<p><strong><a href="/en/access/">Getting here →</a></strong> · <strong><a href="/en/zazen/">Zazen →</a></strong> · <strong><a href="/en/etiquette/">Etiquette & what to bring →</a></strong> · <strong><a href="/en/faq/">FAQ →</a></strong></p>
+</main>
+
+<footer class="ft">
+  <div class="nm">SEIUNJI<span>臨済宗建長寺派　天目山　栖雲寺</span></div>
+  122 Tokusa, Yamato-chō, Kōshū City, Yamanashi 409-1201, Japan<br>
+  〒409-1201 山梨県甲州市大和町木賊122<br>
+  +81 553-48-2797　／　<a href="mailto:tenmokusan@gmail.com">tenmokusan@gmail.com</a><br>
+  Stone garden open daily 8:00–17:00　／　Admission ¥300 (cash, honour box)
+  <div class="lk">
+    <a href="/en/">Home</a><a href="/en/visit/">Visit</a><a href="/en/access/">Getting here</a>
+    <a href="/en/zazen/">Zazen</a><a href="/en/stay/">Stay</a><a href="/en/treasures/">Treasures</a>
+    <a href="/en/etiquette/">Etiquette</a><a href="/en/faq/">FAQ</a><a href="/en/booking/">Booking</a>
+    <a href="/ja/">日本語</a>
+  </div>
+  <div class="cp">(C) 2020 SEIUNJI ALL RIGHTS RESERVED.</div>
+</footer>
+</body>
+</html>

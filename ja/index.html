@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>天目山栖雲寺｜坐禅の聖地・蕎麦切り発祥の地（山梨県甲州市・臨済宗建長寺派）</title>
+<meta name="description" content="貞和四年（1348）開山。堂宇ではなく岩の庭そのものを道場とした禅寺です。拝観は毎日8時〜17時、禅庭300円。定例坐禅会は毎月最終日曜・予約不要。山梨県甲州市大和町木賊。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@200;300;400;500&family=Noto+Serif+JP:wght@300;400;500&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* 天目山栖雲寺｜和紙の地と岩の帯 ― 英語サイトと同じ設計を日本語組みに合わせたもの */
+:root{
+  --stone-900:#1c1a17; --stone-800:#26231f; --stone-700:#3a3630; --stone-600:#514c44;
+  --stone-500:#6e6759; --stone-400:#8d8576; --stone-300:#b3aa99; --stone-200:#cfc6b4;
+  --stone-100:#e5ddcd; --paper:#f7f4ed; --paper-2:#f0ebe0; --ink:#2a2723;
+  --gold:#9a7a38; --gold-l:#c4a86a;
+  --washi-fiber:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.045 0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)'/%3E%3C/svg%3E");
+  --washi-cloud:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='700' height='700' filter='url(%23c)'/%3E%3C/svg%3E");
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;
+  font-size:16px;line-height:2.05;font-weight:300;letter-spacing:.04em;
+  -webkit-font-smoothing:antialiased;text-spacing-trim:trim-start}
+html::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background-image:var(--washi-cloud);background-size:700px 700px;opacity:.075;mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background-image:var(--washi-fiber),var(--grain);background-size:300px 300px,220px 220px;
+  opacity:.065;mix-blend-mode:multiply}
+img{max-width:100%;display:block}
+a{color:var(--stone-700);text-underline-offset:4px}
+a:hover{color:var(--gold)}
+strong,b{font-weight:500;color:#211e1a}
+.wrap{max-width:900px;margin:0 auto;padding:0 28px}
+.num{font-family:"Cormorant Garamond",serif;font-weight:400}
+
+/* 濃い岩の帯 */
+.hd,.nav,.ft,.before{position:relative;isolation:isolate}
+.hd::after,.nav::after,.ft::after,.before::after{content:"";position:absolute;inset:0;z-index:-1;
+  pointer-events:none;background-image:var(--grain);background-size:220px 220px;
+  opacity:.12;mix-blend-mode:overlay}
+
+.hd{background:var(--stone-800);color:#efe9dd;text-align:center;padding:30px 24px 24px}
+.hd .ruby{font-size:10.5px;letter-spacing:.7em;color:var(--stone-400);margin:0 0 8px;text-indent:.7em}
+.hd .logo{font-family:"Noto Serif JP",serif;font-size:36px;font-weight:300;letter-spacing:.34em;
+  margin:0;color:#f3eee3;text-indent:.34em}
+.hd .tag{font-size:11.5px;letter-spacing:.42em;color:var(--stone-300);margin:14px 0 0;text-indent:.42em}
+.hd .en{position:absolute;right:24px;top:24px;font-family:"Cormorant Garamond",serif;
+  font-size:12px;letter-spacing:.24em;color:var(--stone-300);text-decoration:none;
+  border:.5px solid rgba(207,198,180,.4);padding:6px 16px;text-transform:uppercase;transition:.2s}
+.hd .en:hover{color:var(--stone-900);background:var(--stone-200);border-color:var(--stone-200)}
+
+.nav{background:var(--stone-800);border-top:.5px solid rgba(207,198,180,.18)}
+.nav .in{max-width:1180px;margin:0 auto;padding:0 20px;display:flex;flex-wrap:wrap;justify-content:center}
+.nav a{position:relative;color:#ddd5c4;text-decoration:none;font-size:13.5px;font-weight:400;
+  letter-spacing:.14em;padding:17px 20px 16px;border-bottom:2px solid transparent;transition:.2s}
+.nav a+a::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:1px;height:13px;background:rgba(207,198,180,.22)}
+.nav a:hover{color:#fff}
+
+/* ヒーロー */
+.hero{position:relative;height:620px;overflow:hidden;background:var(--stone-700)}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.hero .ov{position:absolute;inset:0;color:#fff;padding:0 max(28px,calc((100% - 1100px)/2)) 58px;
+  background:linear-gradient(rgba(20,18,14,.05) 0%,rgba(20,18,14,.16) 40%,rgba(20,18,14,.80) 100%);
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:34px;font-weight:300;letter-spacing:.18em;
+  margin:0;color:#f7f3ea;text-shadow:0 1px 30px rgba(0,0,0,.55);line-height:1.7}
+.hero .ln{font-family:"Noto Serif JP",serif;font-size:17px;letter-spacing:.14em;margin:20px 0 0;
+  font-weight:300;color:#e8e1d3;text-shadow:0 1px 22px rgba(0,0,0,.6)}
+
+/* 実用情報 */
+.facts{background:var(--stone-700);color:#ece5d7}
+.facts .in{max-width:1100px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(4,1fr)}
+.facts dl{margin:0;padding:26px 24px;border-right:.5px solid rgba(207,198,180,.18)}
+.facts dl:last-child{border-right:0}
+.facts dt{font-size:10.5px;letter-spacing:.28em;color:var(--gold-l);margin:0 0 7px}
+.facts dd{margin:0;font-size:15.5px;line-height:1.75;font-weight:400}
+.facts dd small{display:block;font-size:12px;color:var(--stone-300);letter-spacing:.02em;margin-top:3px;font-weight:300}
+.notice{background:var(--paper-2);color:var(--stone-600);text-align:center;font-size:13.5px;
+  padding:14px 24px;border-bottom:.5px solid var(--stone-200)}
+
+/* 節 */
+.sec{padding:84px 0}
+.sec.tint{background:var(--paper-2)}
+h2{font-family:"Noto Serif JP",serif;font-size:27px;font-weight:300;letter-spacing:.22em;
+  color:#211e1a;margin:0 0 6px;line-height:1.6;position:relative;padding-top:26px;text-indent:.22em}
+h2::before{content:"";position:absolute;top:0;left:0;width:34px;height:1px;background:var(--gold)}
+.kicker{font-family:"Cormorant Garamond",serif;font-size:11px;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--stone-500);margin:0 0 40px}
+p{margin:0 0 20px}
+
+/* 導線 */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);border-top:.5px solid var(--stone-200);margin-top:4px}
+.ways a{display:block;text-decoration:none;color:var(--ink);padding:32px 28px 30px;
+  border-bottom:.5px solid var(--stone-200);border-right:.5px solid var(--stone-200);transition:.25s}
+.ways a:nth-child(3n){border-right:0}
+.ways a:hover{background:rgba(160,150,130,.07)}
+.ways .n{font-family:"Noto Serif JP",serif;font-size:20px;font-weight:400;color:#211e1a;
+  letter-spacing:.14em;display:block;margin-bottom:8px}
+.ways .d{font-size:13.5px;color:var(--stone-600);line-height:1.9;display:block}
+.ways .arw{display:inline-block;margin-top:12px;font-family:"Cormorant Garamond",serif;
+  font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+
+/* 行事 */
+.evs{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:8px}
+.ev .d{font-family:"Cormorant Garamond",serif;font-size:12px;letter-spacing:.14em;color:var(--gold);
+  display:block;margin-bottom:10px}
+.ev h3{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:400;margin:0 0 10px;letter-spacing:.1em;line-height:1.6}
+.ev p{font-size:13.5px;margin:0;color:var(--stone-600);line-height:1.9}
+.more{margin-top:44px}
+.btn{display:inline-block;border:.5px solid var(--stone-300);color:var(--stone-700);text-decoration:none;
+  padding:14px 36px;font-size:13.5px;letter-spacing:.14em;transition:.2s}
+.btn:hover{background:var(--stone-800);color:#f3eee3;border-color:var(--stone-800)}
+
+/* この寺について */
+.abouts{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:8px}
+.abt img{aspect-ratio:4/3;object-fit:cover;width:100%;margin-bottom:22px}
+.abt h3{font-family:"Noto Serif JP",serif;font-size:20px;font-weight:400;color:#211e1a;
+  margin:0 0 12px;letter-spacing:.14em}
+.abt p{font-size:13.5px;margin:0;line-height:1.95;color:var(--stone-600)}
+
+/* 春夏秋冬 */
+.seasons .sgrid{display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:.5px solid var(--stone-200);margin-top:4px}
+.seasons article{border-bottom:.5px solid var(--stone-200);
+  border-right:.5px solid var(--stone-200);padding:0 0 30px}
+.seasons article:last-child{border-right:0}
+.seasons img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.seasons .lab{display:flex;align-items:baseline;gap:14px;padding:26px 22px 10px}
+.seasons .kj{font-family:"Noto Serif JP",serif;font-size:32px;font-weight:400;color:#211e1a;line-height:1;letter-spacing:.1em}
+.seasons .rb{font-size:11px;letter-spacing:.24em;color:var(--gold)}
+.seasons p{font-size:13.5px;line-height:1.95;color:var(--stone-600);margin:0 0 12px;padding:0 22px}
+.seasons p.ev2{font-size:13px;color:var(--stone-500);border-top:.5px solid var(--stone-200);
+  margin:16px 22px 0;padding:14px 0 0}
+.seasons p.ev2 b{display:block;color:var(--stone-700);font-weight:500;font-size:11px;
+  letter-spacing:.2em;margin-bottom:6px}
+.seasons .close{margin-top:46px;font-family:"Noto Serif JP",serif;font-size:19px;
+  line-height:2;color:#211e1a;font-weight:300;letter-spacing:.1em}
+
+/* お知らせ */
+.news{max-width:760px}
+.news ul{margin:0;padding:0;border-top:.5px solid var(--stone-200)}
+.news li{list-style:none;border-bottom:.5px solid var(--stone-200);padding:22px 0;display:flex;gap:26px}
+.news .dt{font-family:"Cormorant Garamond",serif;font-size:13px;color:var(--stone-500);
+  min-width:84px;padding-top:4px;letter-spacing:.1em}
+.news .bd a{font-size:16px;text-decoration:none;font-weight:400;color:#211e1a}
+.news .bd a:hover{color:var(--gold)}
+.news .bd p{margin:6px 0 0;font-size:13.5px;color:var(--stone-600);line-height:1.9}
+
+/* フッター */
+.ft{background:var(--stone-900);color:var(--stone-300);padding:64px 28px 46px;text-align:center;
+  font-size:13.5px;line-height:2.1;letter-spacing:.04em}
+.ft .nm{font-family:"Noto Serif JP",serif;font-size:19px;letter-spacing:.3em;color:#f3eee3;
+  margin-bottom:14px;font-weight:300;text-indent:.3em}
+.ft a{color:var(--stone-200)}
+.ft .lk{margin-top:32px;padding-top:28px;border-top:.5px solid rgba(207,198,180,.18);
+  display:flex;flex-wrap:wrap;gap:14px 28px;justify-content:center}
+.ft .lk a{font-size:13px;letter-spacing:.08em;text-decoration:none;color:#cfc6b4}
+.ft .lk a:hover{color:#fff}
+.ft .cp{margin-top:32px;font-family:"Cormorant Garamond",serif;font-size:11px;
+  color:var(--stone-600);letter-spacing:.14em}
+
+/* 注釈 */
+.anno{display:none}
+body.show-anno .anno{display:block}
+.anno{border-left:2px solid var(--gold);padding:10px 0 10px 18px;margin:26px 0;
+  font-size:13px;line-height:1.9;color:var(--stone-600)}
+.anno b{color:var(--stone-800)}
+.annobar{position:fixed;right:16px;bottom:16px;z-index:10000}
+.annobar button{background:var(--stone-800);color:var(--stone-200);border:0;padding:12px 20px;
+  font-size:12px;letter-spacing:.08em;cursor:pointer;font-family:inherit;box-shadow:0 2px 16px rgba(0,0,0,.35)}
+body.show-anno .annobar button{background:var(--gold);color:#fff}
+
+@media(max-width:860px){
+  .hero{height:420px}.hero h1{font-size:22px}.hero .ln{font-size:14px}
+  .hd .logo{font-size:26px;letter-spacing:.2em}.hd .en{position:static;display:inline-block;margin-top:16px}
+  .nav .in{padding:0 10px}.nav a{font-size:12px;letter-spacing:.06em;padding:13px 11px 12px}
+  .facts .in{grid-template-columns:repeat(2,1fr)}
+  .facts dl:nth-child(2n){border-right:0}
+  .ways,.evs,.abouts{grid-template-columns:1fr}
+  .ways a{border-right:0}
+  .seasons .sgrid{grid-template-columns:repeat(2,1fr)}
+  .seasons article:nth-child(2n){border-right:0}
+  .seasons img{aspect-ratio:4/3}
+  .sec{padding:54px 0}h2{font-size:22px}
+}
+@media(max-width:520px){
+  .facts .in{grid-template-columns:1fr}.facts dl{border-right:0;border-bottom:.5px solid rgba(207,198,180,.18)}
+  .seasons .sgrid{grid-template-columns:1fr}.seasons article{border-right:0}
+}
+</style>
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<style id="proto-banner-css">
+.proto-bar{position:fixed;top:0;left:0;right:0;z-index:100000;background:#9a7a38;color:#fff;
+  font:500 12px/1 "Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;letter-spacing:.06em;
+  display:flex;align-items:center;justify-content:center;gap:14px;height:30px;padding:0 12px;
+  box-shadow:0 1px 8px rgba(0,0,0,.18)}
+.proto-bar b{font-weight:700;letter-spacing:.2em}
+.proto-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+html{scroll-padding-top:30px} body{padding-top:30px !important}
+@media(max-width:560px){.proto-bar{font-size:10.5px;gap:8px}.proto-bar .hide-s{display:none}}
+</style>
+</head>
+<body>
+<div class="proto-bar"><b>試作 PROTOTYPE</b><span>公式サイトではありません<span class="hide-s">／Not the official website</span></span><a href="/">一覧へ</a></div>
+
+<header class="hd">
+  <a class="en" href="/en/">English</a>
+  <p class="ruby">てんもくさん　せいうんじ</p>
+  <h1 class="logo">天目山　栖雲寺</h1>
+  <p class="tag">坐 禅 の 聖 地 <sup style="font-size:8px">®</sup></p>
+</header>
+<nav class="nav"><div class="in">
+  <a href="https://www.tenmokusan.or.jp/about.html">栖雲寺略縁起</a>
+  <a href="https://www.tenmokusan.or.jp/service.html">拝観の御案内</a>
+  <a href="https://www.tenmokusan.or.jp/message.html">坐禅・禅体験</a>
+  <a href="https://www.tenmokusan.or.jp/kenshu.html">研修・合宿</a>
+  <a href="https://www.tenmokusan.or.jp/welfare.html">御朱印・授与品</a>
+  <a href="https://www.tenmokusan.or.jp/pg106.html">諸行事</a>
+  <a href="https://www.tenmokusan.or.jp/kishin.html">ご寄進</a>
+  <a href="https://www.tenmokusan.or.jp/recruit.html">アクセス</a>
+  <a href="https://www.tenmokusan.or.jp/contact.html">お問い合わせ</a>
+</div></nav>
+
+<section class="hero">
+  <img src="assets/hero.jpg" alt="上空から見た栖雲寺の禅庭。岩の斜面にひとり坐る僧">
+  <div class="ov">
+    <h1>庭が、そのまま寺である。</h1>
+    <p class="ln">貞和四年（1348）開山　臨済宗建長寺派　天目山栖雲寺</p>
+  </div>
+</section>
+
+<section class="facts"><div class="in">
+  <dl><dt>拝 観</dt><dd>8:00 – 17:00<small>禅庭（石庭）300円・拝観料箱へ</small></dd></dl>
+  <dl><dt>定例坐禅会</dt><dd>毎月最終日曜 7:00 –<small>予約不要・志納金300円・初心者歓迎</small></dd></dl>
+  <dl><dt>アクセス</dt><dd>甲斐大和駅からバス14分<small>甲州市市民バス「天目（栖雲寺）」下車すぐ</small></dd></dl>
+  <dl><dt>お問い合わせ</dt><dd>0553-48-2797<small>tenmokusan@gmail.com</small></dd></dl>
+</div></section>
+<p class="notice">宝物館は現在、拝観を中止しております。禅庭（石庭）は毎日ご拝観いただけます。　<a href="https://www.tenmokusan.or.jp/service.html">詳しくはこちら</a></p>
+
+<div class="wrap"><div class="anno" style="margin-top:28px">
+<b>日本語側も英語サイトと同じ設計にしました。</b>和紙の地＋岩の帯、ヘアラインだけで組む構造、金は差し色のみ。
+ただし<b>これは既存サイトへの貼り込みではなく、1枚で完結する独立したページ</b>です。
+BiNDupの共通ヘッダー・フッター（ネイビー）とは併存できないので、
+採用するなら<b>日本語サイト全体をこの設計に寄せる</b>判断が要ります。
+貼り込み用のブロック（ネイビー版）は <code>貼り付け用/</code> にそのまま残してあります。
+</div></div>
+
+<!-- 導線 -->
+<section class="sec"><div class="wrap">
+  <h2>御 用 の 向 き</h2>
+  <p class="kicker">What are you looking for</p>
+  <div class="ways">
+    <a href="https://www.tenmokusan.or.jp/service.html"><span class="n">拝観のご案内</span><span class="d">拝観時間・拝観料・境内の見どころ。禅庭は散策およそ30分です</span><span class="arw">Visiting →</span></a>
+    <a href="https://www.tenmokusan.or.jp/message.html"><span class="n">坐禅・禅体験</span><span class="d">毎月最終日曜の定例坐禅会、幻住坐禅会、写経・作務・蕎麦打ち</span><span class="arw">Zazen →</span></a>
+    <a href="https://www.tenmokusan.or.jp/kenshu.html"><span class="n">研修・合宿</span><span class="d">企業研修・学校の合宿を最大20名まで。日帰りも一泊二日も</span><span class="arw">Retreats →</span></a>
+    <a href="https://www.tenmokusan.or.jp/welfare.html"><span class="n">御朱印・授与品</span><span class="d">御朱印6種、勝守、禅語の白扇。郵送でもお受けいただけます</span><span class="arw">Goshuin →</span></a>
+    <a href="https://www.tenmokusan.or.jp/kishin.html"><span class="n">ご寄進</span><span class="d">庫裏の修復、禅庭の整備、宝物の保存に。星旋会のご案内も</span><span class="arw">Support →</span></a>
+    <a href="https://www.tenmokusan.or.jp/recruit.html"><span class="n">アクセス</span><span class="d">甲斐大和駅から甲州市市民バスで約14分、終点「天目」下車</span><span class="arw">Access →</span></a>
+  </div>
+</div></section>
+
+<!-- 春夏秋冬 -->
+<section class="sec tint seasons"><div class="wrap">
+  <h2>山 の 一 年</h2>
+  <p class="kicker">Spring · Summer · Autumn · Winter</p>
+  <div class="sgrid">
+    <article>
+      <img src="assets/shidare-zakura.jpg" alt="満開のしだれ桜と石の観音">
+      <div class="lab"><span class="kj">春</span><span class="rb">はる</span></div>
+      <p>石の観音の上に、しだれ桜が咲きます。標高がありますので、里より二週間ほど遅れて咲きます。</p>
+      <p class="ev2"><b>この季節の行事</b>三月、蕎麦の種をまき、住職が十割を打ちます。四月中旬の日曜には摩利支天大祭、御厨子を開きます。</p>
+    </article>
+    <article>
+      <img src="assets/garden-boulders.jpg" alt="苔むした岩と夏の緑">
+      <div class="lab"><span class="kj">夏</span><span class="rb">なつ</span></div>
+      <p>岩に苔が回り、斜面がひといろの緑になります。里が暑い日でも、ここは涼しい。外で一時間坐るには、いちばん良い季節です。</p>
+      <p class="ev2"><b>この季節の行事</b>五月末に緑陰の茶会、六月第一日曜に天目山茶会。七月二十七日は開山忌です。</p>
+    </article>
+    <article>
+      <img src="assets/autumn-fuji.jpg" alt="紅葉の向こうに富士山">
+      <div class="lab"><span class="kj">秋</span><span class="rb">あき</span></div>
+      <p>紅葉の向こうに富士が立ちます。冷えた朝ほど、よく見えます。駅から歩く竜門峡の道が、いちばん美しい時期です。</p>
+      <p class="ev2"><b>この季節の行事</b>十一月七日・八日は蕎麦まつりと宝物風入れ展。<strong>年に一度、蔵を開けて宝物に風を通す日</strong>です。マニ像の御朱印もこの二日だけ。</p>
+    </article>
+    <article>
+      <img src="assets/winter-zen.jpg" alt="雪の積もった禅庭の岩">
+      <div class="lab"><span class="kj">冬</span><span class="rb">ふゆ</span></div>
+      <p>岩に雪が積もり、斜面が静かになります。坐ることは止みません。人がほとんど来ません。それが、冬に来る理由です。</p>
+      <p class="ev2"><b>この季節の行事</b>十二月、大菩薩峠で坐ります。なお季節運行の山バスは十二月中旬から四月中旬まで走りません。市民バスは通年です。</p>
+    </article>
+  </div>
+  <p class="close">禅庭は、一年のどの日も開いております。<br>
+  日を選べるのでしたら、どうぞ静かな月をお選びください。</p>
+</div></section>
+
+<div class="wrap"><div class="anno">
+<b>春夏秋冬は、飾りではなく分散のための節です。</b>
+この寺は参道が細く、限定御朱印の企画で周辺道路が渋滞して警察の指導を受けた経緯があります。
+四季を並べて「いつ来てもいい」と示すことは、<b>桜の週末に集中させないための仕掛け</b>でもあります。
+着地の二行（「一年のどの日も開いております／日を選べるのでしたら、どうぞ静かな月を」）はそのために置いています。
+</div></div>
+
+<!-- これからの行事 -->
+<section class="sec"><div class="wrap">
+  <h2>こ れ か ら の 行 事</h2>
+  <p class="kicker">Upcoming</p>
+  <div class="evs">
+    <div class="ev"><span class="d">9月27日（日）</span>
+      <h3>幻住坐禅会　一日研修</h3>
+      <p>9時30分受付／6,000円／定員15名。<br><strong style="color:#8a2e22">【受付状況をここに記載してください】</strong></p></div>
+    <div class="ev"><span class="d">10月10日（土）– 11日（日）</span>
+      <h3>幻住坐禅会　二日間研修</h3>
+      <p>16時受付／15,000円／定員15名。寺泊は定員に達しております。</p></div>
+    <div class="ev"><span class="d">11月7日（土）– 8日（日）</span>
+      <h3>蕎麦まつり・宝物風入れ展</h3>
+      <p>9時〜15時／志納金1,000円。年に一度、蔵を開けて宝物に風を通します。住職の宝物解説は両日12時〜12時30分。</p></div>
+  </div>
+  <p class="more"><a class="btn" href="https://www.tenmokusan.or.jp/pg106.html">年中行事の一覧へ</a></p>
+</div></section>
+
+<!-- この寺について -->
+<section class="sec tint"><div class="wrap">
+  <h2>こ の 寺 に つ い て</h2>
+  <p class="kicker">About Seiunji</p>
+  <div class="abouts">
+    <div class="abt">
+      <img src="assets/zazen-rock-priest.jpg" alt="岩の上で坐る">
+      <h3>坐禅の聖地</h3>
+      <p>堂宇を先に建てた寺ではありません。貞和四年（1348）、業海本浄が岩の広がる山肌そのものを道場としました。だから今も、岩の上で坐ります。禅庭は山梨県指定の名勝です。</p>
+    </div>
+    <div class="abt">
+      <img src="assets/soba-kenchin.jpg" alt="住職手打ちの蕎麦とけんちん汁">
+      <h3>蕎麦切り発祥の地</h3>
+      <p>寺伝によれば、開山が中国・杭州の天目山で学んだ製麺の技を、この山に伝えました。尾張藩士・天野信景の随筆『塩尻』にも、蕎麦切りが甲州の天目山に始まるという記述があります。</p>
+    </div>
+    <div class="abt">
+      <img src="assets/kuri-interior.jpg" alt="徳川家康の寺領寄進により再建された庫裏">
+      <h3>武田の寺</h3>
+      <p>武田信満公の菩提寺です。天正十年、勝頼公は天目山を目指して落ち、田野で自害されました。いま建つ庫裏は、文禄元年（1592）に再建されたものです。</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- お知らせ -->
+<section class="sec"><div class="wrap">
+  <h2>お 知 ら せ</h2>
+  <p class="kicker">News</p>
+  <div class="news">
+    <ul>
+      <li><span class="dt">9.17</span><div class="bd"><a href="https://www.tenmokusan.or.jp/cn7/pg6381674.html">蕎麦まつりのお知らせ（同時開催：宝物風入れ展）</a><p>令和8年11月7日(土)〜8日(日)の2日間。地元の蕎麦屋から蕎麦切りを御奉納いただき、無病息災の御祈祷とふるまいをいたします。</p></div></li>
+      <li><span class="dt">8.4</span><div class="bd"><a href="https://www.tenmokusan.or.jp/message.html">幻住坐禅会のお知らせ</a><p>9月・10月とも空席が残り僅かとなり、寺泊は定員に達しております。足を組めない方にはイス坐禅の用意もございます。</p></div></li>
+    </ul>
+    <p class="more"><a class="btn" href="https://www.tenmokusan.or.jp/">お知らせ一覧へ</a></p>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="anno" style="margin-bottom:40px">
+<b>お知らせは「これから起きること」3件までにしてください。</b>
+現在のトップには、終了した告知が現在進行形で並んでいます ――
+風林火山コラボ御朱印（〜5/10）、緑陰の茶会（5/31）、栖雲寺コンサート（5/2）、
+宝物館拝観中止（〜5/31）、幻住坐禅会の6/28回。
+さらに<b>幻住坐禅会の告知が2月15日・6月1日・8月4日の三回ぶん、ほぼ同じ内容で重複</b>しています。
+初めて来た方には、どれが「これから」でどれが「終わったこと」なのか分かりません。
+</div></div>
+
+<footer class="ft">
+  <div class="nm">臨済宗建長寺派　天目山　栖雲寺</div>
+  〒409-1201　山梨県甲州市大和町木賊122<br>
+  電話 0553-48-2797　／　<a href="mailto:tenmokusan@gmail.com">tenmokusan@gmail.com</a><br>
+  禅庭（石庭）拝観 8:00–17:00　／　拝観料 300円（拝観料箱へ）
+  <div class="lk">
+    <a href="https://www.tenmokusan.or.jp/about.html">栖雲寺略縁起</a><a href="https://www.tenmokusan.or.jp/service.html">拝観の御案内</a>
+    <a href="https://www.tenmokusan.or.jp/message.html">坐禅・禅体験</a><a href="https://www.tenmokusan.or.jp/kenshu.html">研修・合宿</a>
+    <a href="https://www.tenmokusan.or.jp/welfare.html">御朱印・授与品</a><a href="https://www.tenmokusan.or.jp/pg106.html">諸行事</a>
+    <a href="https://www.tenmokusan.or.jp/pg3335049.html">摩利支尊天</a><a href="https://www.tenmokusan.or.jp/pg5761393.html">樹木葬・永代供養墓</a>
+    <a href="https://www.tenmokusan.or.jp/kishin.html">ご寄進</a><a href="https://www.tenmokusan.or.jp/recruit.html">アクセス</a>
+    <a href="https://blog.livedoor.jp/tenmokusan/">住職日単</a><a href="https://www.tenmokusan.or.jp/contact.html">お問い合わせ</a>
+    <a href="/en/">English</a>
+  </div>
+  <div class="cp">(C) 2020 SEIUNJI ALL RIGHTS RESERVED.</div>
+</footer>
+
+<div class="annobar"><button onclick="document.body.classList.toggle('show-anno')">変更点の説明を表示 / 非表示</button></div>
+<script>document.body.classList.add('show-anno');</script>
+</body>
+</html>

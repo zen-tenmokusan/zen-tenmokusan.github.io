@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>企業研修・学校合宿の受け入れ｜天目山栖雲寺（山梨県甲州市）</title>
+<meta name="description" content="標高1,050mの禅寺で行う一泊二日の研修。坐禅、作務、精進料理、蕎麦打ち。企業の幹部研修・内定者研修、大学ゼミ、部活動の合宿を最大20名までお受けしています。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.tenmokusan.or.jp/_shared.css">
+<style>
+.hero{position:relative;height:340px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.hero .ov{position:absolute;inset:0;background:linear-gradient(rgba(10,30,55,.3),rgba(10,30,55,.72));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;text-align:center;padding:0 20px}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;letter-spacing:.2em;margin:0 0 14px;font-weight:500;line-height:1.6}
+.hero p{font-size:13.5px;letter-spacing:.12em;margin:0;line-height:2}
+.intro{max-width:700px;margin:0 auto;padding:52px 20px 0;font-size:15px;line-height:2.25}
+.intro p{margin:0 0 18px}
+
+.kinds{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.kind{border:1px solid var(--line);padding:0 0 24px}
+.kind img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.kind .in{padding:20px 22px 0}
+.kind .lb{display:inline-block;background:var(--navy);color:#fff;font-size:11.5px;
+  padding:3px 11px;letter-spacing:.14em;margin-bottom:10px}
+.kind h3{font-family:"Noto Serif JP",serif;font-size:18px;color:var(--navy);margin:0 0 9px;letter-spacing:.09em;font-weight:500}
+.kind p{font-size:13px;margin:0 0 10px;line-height:1.95;color:#555}
+.kind .who{font-size:11.5px;color:var(--ink-l);border-top:1px dotted var(--line);padding-top:9px;margin:0}
+
+table.tb{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:24px;background:#fff}
+table.tb th,table.tb td{border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top}
+table.tb th{background:#eef1f5;font-weight:500;color:var(--navy);white-space:nowrap;letter-spacing:.05em}
+table.tb td.t{white-space:nowrap;color:var(--navy);font-family:"Noto Serif JP",serif;width:96px}
+table.tb tr.hl td{background:#fdfaf0}
+table.tb b{color:var(--navy)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:24px}
+.two h3{font-family:"Noto Serif JP",serif;font-size:17px;color:var(--navy);letter-spacing:.1em;
+  margin:0 0 4px;font-weight:500;padding-bottom:8px;border-bottom:1px solid var(--navy)}
+
+.warnbox{border:2px solid #a03c2f;background:#fdf6f4;padding:26px 30px;margin-top:30px}
+.warnbox h3{font-family:"Noto Serif JP",serif;font-size:20px;color:#a03c2f;margin:0 0 12px;letter-spacing:.1em;font-weight:500}
+.warnbox p{font-size:14px;line-height:2.05;margin:0 0 12px}
+.warnbox .big{font-size:15.5px;font-weight:500;color:#8a2e22}
+.warnbox .alt{background:#fff;border:1px solid #e0cdc8;padding:14px 18px;font-size:13px;line-height:1.95;margin:0}
+
+.price{border:1px solid var(--line);margin-top:22px}
+.price .ph{background:var(--navy);color:#fff;padding:12px 20px;font-size:14px;letter-spacing:.1em;
+  font-family:"Noto Serif JP",serif}
+.price .pb{padding:4px 20px 18px}
+.price table{width:100%;border-collapse:collapse;font-size:13.5px}
+.price td,.price th{padding:11px 4px;border-bottom:1px solid var(--line);text-align:left}
+.price th{font-weight:400;color:#555}
+.price td.p{text-align:right;color:var(--navy);font-family:"Noto Serif JP",serif;font-size:16px;white-space:nowrap}
+.price .note{font-size:12px;color:var(--ink-l);line-height:1.9;margin:12px 0 0}
+
+.flow{counter-reset:s;margin-top:24px;padding:0;list-style:none}
+.flow li{counter-increment:s;position:relative;padding:0 0 22px 52px;border-left:1px solid var(--line);margin-left:16px}
+.flow li:last-child{border-left-color:transparent}
+.flow li::before{content:counter(s);position:absolute;left:-16px;top:-2px;width:32px;height:32px;
+  background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px}
+.flow h4{font-family:"Noto Serif JP",serif;font-size:16px;margin:2px 0 4px;color:var(--navy);font-weight:500;letter-spacing:.06em}
+.flow p{font-size:13px;margin:0;color:#555;line-height:1.9}
+
+.form{background:var(--bg-t);padding:32px 34px;margin-top:26px}
+.form .pre{background:#fff;border-left:4px solid var(--gold);padding:14px 20px;font-size:13px;line-height:2;margin:0 0 24px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.fg .full{grid-column:1/-1}
+.fg label{display:block;font-size:12.5px;color:#444;margin-bottom:5px;letter-spacing:.04em}
+.fg .req{color:#a03c2f;font-size:10.5px;margin-left:5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:9px 11px;border:1px solid #c9c9c9;
+  font-size:13.5px;font-family:inherit;background:#fff;border-radius:2px}
+.fg textarea{min-height:82px;resize:vertical}
+.fg .opts{font-size:13px;line-height:2.1;color:#444}
+.fg .opts label{display:inline-block;margin:0 16px 0 0;font-size:13px}
+.todo{background:#fbf7ea;border:1px dashed #c9b98a;color:#7d6a24;padding:16px 20px;margin-top:18px;font-size:13px;line-height:1.95}
+.todo b{color:#5e4f14}
+@media(max-width:860px){.kinds{grid-template-columns:1fr}.two{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}.hero h1{font-size:21px}.form{padding:22px 18px}.warnbox{padding:20px 18px}}
+</style>
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<style id="proto-banner-css">
+.proto-bar{position:fixed;top:0;left:0;right:0;z-index:100000;background:#9a7a38;color:#fff;
+  font:500 12px/1 "Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;letter-spacing:.06em;
+  display:flex;align-items:center;justify-content:center;gap:14px;height:30px;padding:0 12px;
+  box-shadow:0 1px 8px rgba(0,0,0,.18)}
+.proto-bar b{font-weight:700;letter-spacing:.2em}
+.proto-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+html{scroll-padding-top:30px} body{padding-top:30px !important}
+@media(max-width:560px){.proto-bar{font-size:10.5px;gap:8px}.proto-bar .hide-s{display:none}}
+</style>
+</head>
+<body>
+<div class="proto-bar"><b>試作 PROTOTYPE</b><span>公式サイトではありません<span class="hide-s">／Not the official website</span></span><a href="/">一覧へ</a></div>
+
+<header class="hd">
+  <a class="lang" href="https://www.tenmokusan.or.jp/cn8/welfare.html">English</a>
+  <p class="ruby">てんもくさん　　せいうんじ</p>
+  <h1 class="logo">天目山　栖雲寺</h1>
+  <p class="tag">坐禅の聖地<sup style="font-size:9px">®</sup></p>
+</header>
+<nav class="nav">
+  <a href="/mock/top.html">TOP</a><a href="https://www.tenmokusan.or.jp/about.html">栖雲寺略縁起</a><a href="https://www.tenmokusan.or.jp/service.html">拝観の御案内</a>
+  <a href="https://www.tenmokusan.or.jp/message.html">幻住坐禅・禅体験</a>
+  <a class="new" href="#" style="border-bottom:1px solid var(--gold)">研修・合宿</a>
+  <a href="/mock/juyohin.html">御朱印・授与品</a><a href="https://www.tenmokusan.or.jp/pg106.html">諸行事</a><a href="https://www.tenmokusan.or.jp/pg3335049.html">摩利支尊天</a>
+  <a href="https://www.tenmokusan.or.jp/pg5761393.html">樹木葬・永代供養墓</a><a href="/mock/kishin.html">ご寄進</a>
+  <a href="https://www.tenmokusan.or.jp/recruit.html">アクセス</a><a href="https://www.tenmokusan.or.jp/contact.html">お問い合わせ</a>
+</nav>
+
+<section class="hero">
+  <img src="https://www.tenmokusan.or.jp/_src/61985407/4620693218550392764.4d708a2234dd3233f123ba711e157663.20100722.jpg" alt="禅庭の岩の上で坐禅する">
+  <div class="ov">
+    <h1>企業研修・学校合宿の<br>ご 案 内</h1>
+    <p>最大二十名まで　／　日帰りも、一泊二日も　／　中学生以上</p>
+  </div>
+</section>
+
+<div class="wrap"><div class="anno" style="margin-top:22px">
+<b>このページは新規です。</b>素材は<b>すでに全部あります</b> ── 岩坐禅／本堂坐禅／写経・写仏／作務（ぞうきん掛け）／蕎麦打ち／
+食作法（精進料理）／建長汁の作り方／うちわ御朱印／宝物解説。各60分〜、最大20名。<br>
+問題は、それが<b>「禅体験メニュー」としてバラバラに並んでいるだけで、「一泊二日の研修」として検討できる形になっていない</b>ことです。
+企業の人事も、大学の教員も、部活の顧問も、<b>「何時に着いて、何をして、いくらで、何人泊まれるのか」が一枚で見えないと稟議が書けません</b>。
+だから問い合わせが来ない。このページはその一枚です。<br><br>
+そして<b>この寺にとって、人数を増やさずに収入を増やせるほぼ唯一の方向</b>でもあります。
+参道は細く、過去に限定御朱印の企画で周辺道路が渋滞し警察の指導を受けています。
+不特定多数を呼ぶより、<b>15〜20人の団体を平日に一つ受ける</b>ほうが、この寺の形に合っています。
+</div></div>
+
+<div class="intro">
+  <p>貞和四年（1348）から、ここは修行の道場です。</p>
+  <p>観光のための寺ではありません。標高千五十メートル、岩の上で坐る庭が、そのまま寺になっている場所です。</p>
+  <p>電波は届きますが、他にすることがありません。<br>それが、この寺が研修の場として使われてきた理由です。</p>
+</div>
+
+<!-- ============ 三つのかたち ============ -->
+<section class="sec"><div class="wrap">
+  <h2 class="t">三 つ の か た ち</h2>
+  <p class="sub">THREE WAYS</p>
+  <div class="kinds">
+    <div class="kind">
+      <img src="https://www.tenmokusan.or.jp/_src/61985422/p1070541.jpg" alt="庫裏の客間">
+      <div class="in"><span class="lb">A ｜ 企 業 研 修</span>
+        <h3>幹部・管理職・内定者</h3>
+        <p>坐る。掃除をする。黙って食べる。そのあいだ、役職も肩書きも関係がありません。</p>
+        <p>会議室で「対話」を演出するより、半日、同じ岩の上で黙って坐るほうが、よほど何かが変わります。</p>
+        <p class="who">ご担当：人事・経営企画のご部署</p></div>
+    </div>
+    <div class="kind">
+      <img src="https://www.tenmokusan.or.jp/_src/61985419/img_5425.jpg" alt="重要文化財 普応国師坐像">
+      <div class="in"><span class="lb">B ｜ 学 校 ・ ゼ ミ</span>
+        <h3>大学ゼミ・部活動の合宿</h3>
+        <p>朝五時に起き、坐り、掃除をし、精進料理をいただく。中学生以上でしたらお受けできます。</p>
+        <p>歴史の話をお聞きになりたければ、武田家の菩提寺として、あるいは十字架を捧げ持つ仏像を伝える寺として、お話しできることがあります。</p>
+        <p class="who">宗教史／日本史／民俗学／食文化の題材として</p></div>
+    </div>
+    <div class="kind">
+      <img src="https://www.tenmokusan.or.jp/_src/54507324/img_0651.jpg" alt="雪の禅庭">
+      <div class="in"><span class="lb">C ｜ リ ト リ ー ト</span>
+        <h3>少人数・四名から</h3>
+        <p>デジタル断ち、書き物の合宿、経営者の一人静養。</p>
+        <p>幻住坐禅会（一日研修6,000円／二日間研修15,000円）の延長線上で、日程と内容をご相談のうえ組みます。</p>
+        <p class="who">四名から／貸切のご相談も承ります</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ プログラム ============ -->
+<section class="sec tint"><div class="wrap">
+  <h2 class="t">何 が で き る か</h2>
+  <p class="sub">PROGRAMS</p>
+  <p style="text-align:center;font-size:13.5px;color:var(--ink-l);margin:-18px 0 0">
+    いずれも最大20名まで。組み合わせは自由です。</p>
+  <table class="tb">
+    <tr><th>プログラム</th><th>所要</th><th>内容</th></tr>
+    <tr class="hl"><td><b>岩坐禅（禅庭坐禅）</b></td><td>60分〜</td><td>山梨県指定史跡の禅庭で、岩の上に坐ります。天候により堂内に切り替えます</td></tr>
+    <tr><td>本堂・会館での坐禅</td><td>60分〜</td><td>足を組めない方にはイス坐禅の用意もございます</td></tr>
+    <tr><td>朝課</td><td>【TBC】</td><td>朝の勤行に加わっていただきます</td></tr>
+    <tr><td>写経・写仏</td><td>60分〜</td><td></td></tr>
+    <tr><td>作務（板の間のぞうきん掛け）</td><td>60分〜</td><td>禅寺の掃除です。体を使います</td></tr>
+    <tr class="hl"><td><b>食作法（じきさほう）</b></td><td>60分〜</td><td>禅寺の作法で精進料理をいただきます。音を立てず、残さず、器を洗って飲む</td></tr>
+    <tr><td>建長汁（けんちん汁）の作り方教室</td><td>60分〜</td><td></td></tr>
+    <tr><td>蕎麦打ち体験</td><td>60分〜</td><td>蕎麦切り発祥の地と伝わる寺で打ちます</td></tr>
+    <tr><td>うちわ御朱印</td><td>60分〜</td><td></td></tr>
+    <tr><td>宝物解説・境内案内</td><td>60分〜</td><td>住職が案内します</td></tr>
+  </table>
+</div></section>
+
+<!-- ============ 進行例 ============ -->
+<section class="sec"><div class="wrap">
+  <h2 class="t">一 泊 二 日 の 進 行 例</h2>
+  <p class="sub">SAMPLE SCHEDULE</p>
+  <div class="two">
+    <div>
+      <h3>一日目</h3>
+      <table class="tb" style="margin-top:14px">
+        <tr><td class="t">13:00</td><td>到着・受付</td></tr>
+        <tr><td class="t">13:30</td><td>開講。住職より挨拶、寺の由緒と二日間の心得</td></tr>
+        <tr><td class="t">14:00</td><td>境内案内・宝物解説</td></tr>
+        <tr><td class="t">15:00</td><td>作務 ― 板の間のぞうきん掛け</td></tr>
+        <tr class="hl"><td class="t">16:00</td><td><b>岩坐禅</b> ― 禅庭の岩の上で坐ります</td></tr>
+        <tr><td class="t">17:30</td><td>入浴（天目山温泉・別途600円）【TBC：移動手段】</td></tr>
+        <tr class="hl"><td class="t">18:30</td><td><b>食作法</b> ― 禅寺の作法で精進料理を</td></tr>
+        <tr><td class="t">20:00</td><td>自由時間／【TBC：法話か自由討議か】</td></tr>
+        <tr><td class="t">21:30</td><td>消灯</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>二日目</h3>
+      <table class="tb" style="margin-top:14px">
+        <tr><td class="t">6:50</td><td>朝課 ― 朝の勤行に加わっていただきます</td></tr>
+        <tr class="hl"><td class="t">7:00</td><td><b>岩坐禅</b>（60分）</td></tr>
+        <tr><td class="t">8:00</td><td>茶礼</td></tr>
+        <tr><td class="t">8:30</td><td>朝食</td></tr>
+        <tr class="hl"><td class="t">9:30</td><td><b>写経・写仏</b> または <b>蕎麦打ち体験</b></td></tr>
+        <tr><td class="t">11:30</td><td>昼食【TBC：打った蕎麦を食べる流れにできるか】</td></tr>
+        <tr><td class="t">13:00</td><td>振り返り・住職より結びの言葉</td></tr>
+        <tr><td class="t">14:00</td><td>解散</td></tr>
+      </table>
+      <p style="font-size:13px;color:var(--ink-l);margin-top:14px;line-height:1.95">
+        日帰り（企業の半日研修向け）の型もございます。10時到着 → 境内案内 → 岩坐禅 → 食作法 → 作務 → 振り返り → 16時解散。</p>
+    </div>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="anno">
+<b>組み方のコツ（掲載はしません。内部メモです）</b><br>
+・<b>体を使うもの（作務）と坐るものを交互に置く。</b>坐禅を続けると初参加者は必ず脱落します<br>
+・<b>一日目の夕方に岩坐禅を置く</b>のがいちばん効きます。山の光が落ちていく時間に坐るので、印象が強く残る<br>
+・蕎麦打ちは<b>二日目の午前</b>。打ったものをその日の昼に食べる流れにすると満足度が跳ね上がります<br>
+・食作法は「体験」ではなく「作法を守る時間」として案内すること。楽しいイベントとして出すと趣旨がぶれます<br>
+・<b>自由時間を作りすぎない。</b>何もない山の中なので、手持ち無沙汰は不満になります
+</div></div>
+
+<!-- ============ 宿泊 ============ -->
+<section class="sec tint"><div class="wrap">
+  <h2 class="t">宿 泊 に つ い て</h2>
+  <p class="sub">PLEASE READ FIRST</p>
+  <div class="warnbox">
+    <h3>先にお読みください</h3>
+    <p class="big">寺にお泊まりいただく場合、男女別の相部屋で、雑魚寝です。寝袋などはご持参ください。<br>
+      布団の貸し出しは別途二千円です。定員は十一名です。</p>
+    <p>不便です。隠さずに申し上げます。<br>
+      ただ、それがこの寺の形です。四百二十年前に建った庫裏で、床に寝る。
+      それ自体が研修の一部だとお考えいただける団体に、お越しいただきたいと思っております。</p>
+    <p class="alt">
+      <b>個室をご希望の場合</b>は、門前の民宿を特別料金（素泊まり四千五百円）でご案内しております。
+      天目山温泉のご利用は別途六百円です。<br>
+      <b>二十名を超える団体、全員が個室をご希望の団体</b>につきましては、宿泊は近隣の宿にとり、
+      日中の研修のみを寺で行うかたちをお勧めしております。ご相談ください。
+    </p>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="anno">
+<b>ここがこのページでいちばん大事な一節です。</b>
+雑魚寝と寝袋持参を隠すと、当日に必ずもめます。先に書けば、それを承知の団体だけが来ます。
+個人の修行者にはむしろ価値ですが、<b>企業研修と海外からのお客様には、事前に、はっきり書かないと確実にクレームになります。</b><br><br>
+<b>ただし、ここは方針の決定が要ります。</b>
+雑魚寝のまま「修行」として売るのか、宿泊を門前の民宿・天目山温泉に外出しして寺は日中の体験に集中するのか。
+<b>どちらを選ぶかで、法人研修と海外客の単価が変わります。</b>寺側にしか決められない判断です。
+</div></div>
+
+<!-- ============ 設備 ============ -->
+<section class="sec"><div class="wrap">
+  <h2 class="t">設 備</h2>
+  <p class="sub">FACILITIES</p>
+  <table class="tb">
+    <tr><th>受け入れ人数</th><td>体験 最大20名　／　寺泊 最大11名</td></tr>
+    <tr><th>対象年齢</th><td>中学生以上</td></tr>
+    <tr><th>通信</th><td>フリーWi-Fi・電源あり</td></tr>
+    <tr><th>トイレ</th><td>24時間ご利用いただけます</td></tr>
+    <tr><th>入浴</th><td>天目山温泉（別途600円）　<span style="color:#a03c2f">【TBC：徒歩か車か、所要時間】</span></td></tr>
+    <tr><th>食事</th><td>精進料理　<span style="color:#a03c2f">【TBC：提供可能な人数と料金。<b>ここが実質的な受け入れ人数の上限になります</b>】</span></td></tr>
+    <tr><th>駐車場</th><td><span style="color:#a03c2f">【TBC：<b>大型バスが入れるか。学校の合宿では可否を分ける条件です</b>】</span></td></tr>
+    <tr><th>雨天時</th><td>岩坐禅は堂内の坐禅に切り替えます</td></tr>
+  </table>
+</div></section>
+
+<!-- ============ 料金 ============ -->
+<section class="sec tint"><div class="wrap">
+  <h2 class="t">料 金</h2>
+  <p class="sub">FEES</p>
+  <div class="todo" style="margin-top:0">
+    <b>⚠ 以下は「たたき台」です。そのまま公開しないでください。</b><br>
+    すでに公表されている料金（幻住坐禅会 一日6,000円／二日間15,000円、寺ンピング10,000円＋1,000円/人）から
+    筋の通る形で延ばした<b>提案</b>であって、決定ではありません。住職・寺務のご判断で上下させてください。<br>
+    確定するまでは、ページには<b>「お見積もりいたします」とだけ</b>書いておくのが安全です。
+  </div>
+
+  <div class="price">
+    <div class="ph">A ｜ 企業研修（法人）</div>
+    <div class="pb"><table>
+      <tr><th>日帰り半日研修（10〜20名）</th><td class="p">お一人 12,000円</td></tr>
+      <tr><th>一泊二日研修・寺泊（10〜11名）</th><td class="p">お一人 28,000円</td></tr>
+      <tr><th>一泊二日研修・宿泊は外部（12〜20名）</th><td class="p">お一人 20,000円</td></tr>
+      <tr><th>住職の講話を加える</th><td class="p">＋30,000円／回</td></tr>
+    </table>
+    <p class="note">含むもの：プログラム一式、精進料理【TBC】、拝観料、資料。<br>
+      含まないもの：交通費、入浴料、布団レンタル、個室宿泊。8名を下回る場合は一律100,000円。<br>
+      <b>値付けの考え方：</b>二日間研修15,000円は個人向けで、住職の持ち出しに近い価格です。法人は①日程を寺の都合に合わせない
+      ②見積書・請求書・領収書の事務が発生する ③内容のカスタマイズを求める ④参加者の面倒を見る必要がある。
+      この分が上に乗るのは当然で、28,000円はむしろ控えめです。</p></div>
+  </div>
+
+  <div class="price">
+    <div class="ph">B ｜ 学校・大学ゼミ・部活動</div>
+    <div class="pb"><table>
+      <tr><th>日帰り（10〜20名）</th><td class="p">お一人 5,000円</td></tr>
+      <tr><th>一泊二日・寺泊（10〜11名）</th><td class="p">お一人 13,000円</td></tr>
+      <tr><th>一泊二日・宿泊は外部（12〜20名）</th><td class="p">お一人 9,000円</td></tr>
+      <tr><th>講義（宗教史・日本史・食文化）</th><td class="p">＋20,000円／コマ</td></tr>
+    </table>
+    <p class="note">予算が読めて、リピートして、<b>平日とオフシーズンを埋めてくれる</b>相手です。
+      値段で勝つ相手ではなく、空いている日を埋める商品なので単価は下げてよい。<b>平日限定にしてよい</b>（土日は一般の参拝者と坐禅会があるため）。<br>
+      引率の教員は【TBC：無料にするか半額にするか】</p></div>
+  </div>
+
+  <div class="price">
+    <div class="ph">C ｜ 少人数リトリート（個人・4名〜）</div>
+    <div class="pb"><table>
+      <tr><th>一泊二日 貸切リトリート（4〜8名）</th><td class="p">お一人 22,000円</td></tr>
+    </table>
+    <p class="note">最低 88,000円。幻住坐禅会（6,000円／15,000円）と寺ンピング（10,000円＋1,000円/人）の中間に置いています。</p></div>
+  </div>
+
+  <div class="price">
+    <div class="ph">D ｜ 海外からのお客様</div>
+    <div class="pb"><table>
+      <tr><th>一泊二日 Zen Retreat（英語対応）</th><td class="p">お一人 35,000円〜</td></tr>
+      <tr><th>日帰り Zen Experience（2時間・英語）</th><td class="p">お一人 8,000円〜</td></tr>
+    </table>
+    <p class="note"><b>別価格にしてよい部分です。</b>英語対応、通訳、作法の説明、食事の配慮、連絡のやりとり。すべてコストが乗ります。
+      海外の temple stay / zen retreat は一泊2〜5万円が普通の帯で、現在の寺ンピング（1組10,000円＋1,000円/人）は国際的に見ると相当に安い。<br>
+      <b>ただし英語で応対できる人がいることが前提です。</b>いない状態でこの価格を出すと必ず破綻します。
+      まず通訳を手配できる体制を作るか、Airbnb Experiences などのプラットフォーム側に通訳ガイドを立ててもらう形から始めるのが現実的です。</p></div>
+  </div>
+</div></section>
+
+<!-- ============ 流れ ============ -->
+<section class="sec"><div class="wrap">
+  <h2 class="t">お 申 し 込 み ま で の 流 れ</h2>
+  <p class="sub">HOW IT WORKS</p>
+  <ol class="flow">
+    <li><h4>ご相談</h4><p>下のフォームからご相談ください。お電話（0553-48-2797）でも結構です。</p></li>
+    <li><h4>お見積もり</h4><p>人数・日程・ご希望のプログラムをうかがい、お見積もりをお送りします。</p></li>
+    <li><h4>下見</h4><p>下見にお越しいただけます。<span style="color:#a03c2f">【TBC：下見の受け入れ可否】</span></p></li>
+    <li><h4>お申し込みの確定</h4><p>内容と日程が決まりましたら、お申し込みを確定します。</p></li>
+    <li><h4>お支払い</h4><p><span style="color:#a03c2f">【TBC：お支払い方法。<b>請求書払いに対応できるかどうかは、法人相手では決定的に重要です</b>。インボイス登録の有無も】</span></p></li>
+  </ol>
+</div></section>
+
+<!-- ============ フォーム ============ -->
+<section class="sec tint"><div class="wrap">
+  <h2 class="t">お 見 積 も り の ご 依 頼</h2>
+  <p class="sub">REQUEST A QUOTE</p>
+  <div class="form">
+    <p class="pre">
+      ・受け入れは<b>最大20名</b>まで、寺にお泊まりいただけるのは<b>11名</b>までです<br>
+      ・寺泊は<b>男女別の相部屋で、雑魚寝です。寝袋などはご持参ください</b><br>
+      ・対象は<b>中学生以上</b>です<br>
+      ・お返事まで【TBC：◯日】ほどいただきます。お急ぎの場合はお電話ください（0553-48-2797）
+    </p>
+    <div class="fg">
+      <div><label>お名前<span class="req">必須</span></label><input type="text"></div>
+      <div><label>団体名・学校名・企業名<span class="req">必須</span></label><input type="text"></div>
+      <div><label>部署・役職</label><input type="text"></div>
+      <div><label>メールアドレス<span class="req">必須</span></label><input type="email"></div>
+      <div><label>お電話番号<span class="req">必須</span></label><input type="tel"></div>
+      <div><label>ご利用の種類<span class="req">必須</span></label>
+        <select><option>企業研修</option><option>学校・大学のゼミ</option><option>部活動・サークル</option>
+        <option>個人のグループ・リトリート</option><option>その他</option></select></div>
+      <div><label>ご希望の日程（第一希望）<span class="req">必須</span></label><input type="date"></div>
+      <div><label>ご希望の日程（第二希望）</label><input type="date"></div>
+      <div><label>日帰り／宿泊<span class="req">必須</span></label>
+        <select><option>日帰り</option><option>一泊二日</option><option>二泊三日</option><option>未定</option></select></div>
+      <div><label>参加人数（概数で結構です）<span class="req">必須</span></label><input type="number" placeholder="例 18"></div>
+      <div><label>うち男性</label><input type="number"></div>
+      <div><label>うち女性</label><input type="number"></div>
+      <div class="full"><label>宿泊のご希望<span class="req">必須</span></label>
+        <select>
+          <option>寺にお泊まり（男女別の相部屋・寝袋等ご持参）</option>
+          <option>寺にお泊まり＋布団を借りたい（＋2,000円）</option>
+          <option>門前の民宿（個室・素泊まり4,500円）</option>
+          <option>近隣の宿に各自で手配します</option>
+          <option>日帰りなので不要</option>
+        </select></div>
+      <div class="full"><label>ご希望のプログラム（いくつでも）</label>
+        <div class="opts">
+          <label><input type="checkbox"> 岩坐禅</label><label><input type="checkbox"> 本堂坐禅</label>
+          <label><input type="checkbox"> 朝課</label><label><input type="checkbox"> 写経・写仏</label>
+          <label><input type="checkbox"> 作務（ぞうきん掛け）</label><label><input type="checkbox"> 食作法（精進料理）</label>
+          <label><input type="checkbox"> 建長汁の作り方</label><label><input type="checkbox"> 蕎麦打ち体験</label>
+          <label><input type="checkbox"> うちわ御朱印</label><label><input type="checkbox"> 宝物解説・境内案内</label>
+          <label><input type="checkbox"> 住職の講話</label><label><input type="checkbox"> おまかせ</label>
+        </div></div>
+      <div class="full"><label>この研修で何を得たいか<span class="req">必須</span></label>
+        <textarea placeholder="たとえば「管理職が肩書きを外して話せる場をつくりたい」「ゼミで日中交流史を扱っているので、その導入にしたい」など"></textarea></div>
+      <div class="full"><label>お食事のご希望・アレルギー等</label><textarea></textarea></div>
+      <div><label>交通手段</label>
+        <select><option>電車とバス</option><option>貸切バス（大型）</option><option>貸切バス（中型）</option>
+        <option>貸切バス（マイクロ）</option><option>自家用車</option><option>未定</option></select></div>
+      <div><label>ご予算の目安</label>
+        <select><option>お一人 5,000円まで</option><option>10,000円まで</option><option>20,000円まで</option>
+        <option>30,000円まで</option><option>ご相談したい</option></select></div>
+      <div><label>下見のご希望</label><select><option>希望する</option><option>希望しない</option></select></div>
+      <div><label>お支払い方法のご希望</label>
+        <select><option>当日現金</option><option>事前振込</option><option>請求書払い（法人）</option></select></div>
+      <div class="full"><label>当寺をどちらでお知りになりましたか</label>
+        <select><option>検索</option><option>YouTube</option><option>Instagram</option><option>ご紹介</option>
+        <option>以前に来たことがある</option><option>その他</option></select></div>
+      <div class="full"><label>その他ご質問</label><textarea></textarea></div>
+      <div class="full" style="text-align:center;margin-top:8px"><a class="btn" href="#">この内容で見積もりを依頼する</a></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="wrap"><div class="anno">
+<b>今のお問い合わせフォーム（/contact.html）では、団体の相談は受けられません。</b>
+人数も日程も目的も書く欄が無いので、「詳しく教えてください」という一往復が必ず発生し、そこで半分が消えます。
+<b>一回のやりとりで見積もりが出せる</b>ことがこのフォームの条件です。<br><br>
+・<b>男女の内訳</b>を分けているのは、寺泊が男女別の相部屋だからです。内訳がないと部屋割りが組めません<br>
+・<b>「この研修で何を得たいか」が最も大事な欄です。</b>ここが書いてあると、寺が組む内容が変わります<br>
+・<b>貸切バスの大型／中型／マイクロを分けている</b>のは、大型が入れるかどうかが学校の合宿の可否を分けるからです<br>
+・<b>「請求書払い（法人）」の選択肢</b>は必須です。法人相手はこれが無いと取引が始まりません<br>
+・フォームの上の4行を先に読ませることで、条件の合わない問い合わせが減り、寺務の手間が減ります<br><br>
+<b>自動返信メールに入れること：</b>受付の旨と回答の目安日数／送信内容の控え／電話番号／
+一泊二日の進行例へのリンク（<b>返事を待つあいだに読んでもらう</b>）／アクセスのページへのリンク。<br>
+送信先は tenmokusan@gmail.com。<b>団体の相談は取りこぼすと痛いので、通知が確実に届くかテスト送信で必ず確認してください</b>（迷惑メールに落ちていないかも）。
+</div></div>
+
+<div class="wrap"><div class="anno" style="margin-bottom:34px">
+<b>ページができたら送る先（営業先）</b><br>
+山梨県内および近隣（東京西部・神奈川）の企業の人事部門／大学のゼミ（宗教学・日本史・民俗学・食文化・経営学）／
+高校・大学の運動部（※食事量の問題があるので精進料理との相性は要検討）／
+<b>研修会社・人材開発会社（企画を売ってくれる相手。ここが最も効率がよい）</b>／山梨県・甲州市の観光・MICE担当部署。
+</div></div>
+
+<nav class="ft-nav">
+  <a href="/mock/top.html">TOP</a><a href="https://www.tenmokusan.or.jp/about.html">栖雲寺略縁起</a><a href="https://www.tenmokusan.or.jp/service.html">拝観の御案内</a>
+  <a href="https://www.tenmokusan.or.jp/message.html">幻住坐禅・禅体験</a><a href="/mock/kenshu.html">研修・合宿</a><a href="/mock/juyohin.html">御朱印・授与品</a>
+  <a href="https://www.tenmokusan.or.jp/pg106.html">諸行事</a><a href="https://www.tenmokusan.or.jp/pg3335049.html">摩利支尊天</a><a href="https://www.tenmokusan.or.jp/pg5761393.html">樹木葬・永代供養墓</a>
+  <a href="/mock/kishin.html">ご寄進</a><a href="https://www.tenmokusan.or.jp/recruit.html">アクセス</a>
+  <a href="https://blog.livedoor.jp/tenmokusan/">住職日単（ブログ）</a><a href="https://www.tenmokusan.or.jp/contact.html">お問い合わせ</a>
+  <a href="https://www.tenmokusan.or.jp/cn8/welfare.html">English</a>
+</nav>
+<footer class="ft">
+  <div class="nm">臨済宗建長寺派　天目山　栖雲寺</div>
+  〒409-1201　山梨県甲州市大和町木賊122<br>
+  ℡ 0553-48-2797　／　✉ <a href="mailto:tenmokusan@gmail.com">tenmokusan@gmail.com</a><br>
+  <div style="margin-top:14px;font-size:11px;opacity:.75">(C) 2020 SEIUNJI ALL RIGHTS RESERVED.</div>
+</footer>
+
+<div class="annobar"><button onclick="document.body.classList.toggle('show-anno')">変更点の説明を表示 / 非表示</button></div>
+<script>document.body.classList.add('show-anno');</script>
+</body>
+</html>

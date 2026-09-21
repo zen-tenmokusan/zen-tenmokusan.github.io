@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<!--
+  天目山栖雲寺 英語トップ（本番用）
+  設置先：https://www.tenmokusan.or.jp/en/index.html
+
+  ・1枚で完結する静的HTMLです。BiNDupの共通ヘッダー・フッターは日本語なので使いません。
+    FTPで /en/ フォルダを作って置いてください。
+  ・【要確認】BiNDupが書き出し時に、管理外のファイル・フォルダを消さないかを
+    事前に確かめてください。消す設定なら、英語セクションは別の置き場所が要ります。
+  ・head の hreflang 3行は、対応する日本語ページ側にも同じものを入れてください。
+    片側だけだと効きません。
+  ・リンク先（/en/visit/ /en/zazen/ など）はまだ存在しません。原稿は 04_英語ページ原稿/ にあります。
+    作るまではリンクを外すか、この1枚に内容を畳んでください。リンク切れのほうが害が大きい。
+  ・最後の "Questions in English are welcome by email" は、英語のメールに返事を出せる体制が
+    ある場合だけ残してください。返事が返らないことが、いちばん信用を損ないます。
+
+  注釈つきの見本：08_HTML/en_index_改修案.html（ブラウザで開いてください）
+  原稿：04_英語ページ原稿/01_index.md
+-->
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seiunji 栖雲寺 — A Working Rinzai Zen Temple in the Mountains of Yamanashi</title>
+<meta name="description" content="Seiunji is a Rinzai Zen training temple founded in 1348 at 1,050 m on Mt. Tenmoku, Yamanashi. Zazen on the rocks of its stone garden, overnight retreats, temple camping, and a Yuan-dynasty painting of a figure holding a cross. Open daily.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* 栖雲寺 英語トップ｜STONE ― 花崗閃緑岩の色と粒子 */
+:root{
+  --stone-900:#1c1a17; --stone-800:#26231f; --stone-700:#3a3630; --stone-600:#514c44;
+  --stone-500:#6e6759; --stone-400:#8d8576; --stone-300:#b3aa99; --stone-200:#cfc6b4;
+  --stone-100:#e5ddcd; --paper:#f7f4ed; --paper-2:#f0ebe0; --ink:#2a2723;
+  --gold:#9a7a38; --gold-l:#c4a86a; --moss:#5d6850;
+  /* 和紙の地 ― 3層で漉く
+     ①繊維（横に長く伸びる楮の繊維）②斑（漉きムラ）③細かい粒子 */
+  --washi-fiber:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.045 0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23f)'/%3E%3C/svg%3E");
+  --washi-cloud:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='700' height='700'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.009' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='700' height='700' filter='url(%23c)'/%3E%3C/svg%3E");
+  /* 花崗岩の粒子 */
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  --navy:#26231f; --navy-d:#1c1a17; --gold-b:#c4a86a; --tsuchi:#6e6759;
+  --ink-l:#6e6759; --line:#cfc6b4; --bg:#f7f4ed; --bg-t:#f0ebe0;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Inter","Helvetica Neue",Arial,sans-serif;font-size:16.5px;line-height:1.9;
+  font-weight:300;letter-spacing:.005em;-webkit-font-smoothing:antialiased}
+/* 和紙の地 ― 漉きムラ（下層）と繊維＋粒子（上層） */
+html::before{content:"";position:fixed;inset:0;z-index:9998;pointer-events:none;
+  background-image:var(--washi-cloud);background-size:700px 700px;
+  opacity:.075;mix-blend-mode:multiply}
+body::after{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;
+  background-image:var(--washi-fiber),var(--grain);
+  background-size:300px 300px,220px 220px;
+  opacity:.065;mix-blend-mode:multiply}
+img{max-width:100%;display:block}
+a{color:var(--stone-700);text-underline-offset:3px}
+a:hover{color:var(--gold)}
+strong{font-weight:500;color:#211e1a}
+.wrap{max-width:900px;margin:0 auto;padding:0 28px}
+
+/* 濃い岩の帯 */
+.hd,.nav,.ft,.before{position:relative;isolation:isolate}
+.hd::after,.nav::after,.ft::after,.before::after{content:"";position:absolute;inset:0;z-index:-1;
+  pointer-events:none;background-image:var(--grain);background-size:220px 220px;
+  opacity:.12;mix-blend-mode:overlay}
+
+.hd{background:var(--stone-800);color:#efe9dd}
+.hd .in{max-width:1180px;margin:0 auto;padding:22px 28px;display:flex;align-items:center;
+  justify-content:space-between;gap:20px}
+.hd .bm{font-family:"Cormorant Garamond",serif;font-size:27px;letter-spacing:.26em;font-weight:300;color:#f3eee3}
+.hd .bm span{font-family:"Noto Serif JP",serif;font-size:14px;letter-spacing:.2em;
+  color:var(--stone-300);margin-left:16px}
+.hd .ja{font-size:10.5px;color:var(--stone-300);text-decoration:none;
+  border:.5px solid rgba(207,198,180,.4);padding:6px 15px;letter-spacing:.2em;
+  text-transform:uppercase;white-space:nowrap;transition:.2s}
+.hd .ja:hover{color:var(--stone-900);background:var(--stone-200);border-color:var(--stone-200)}
+.nav{background:var(--stone-800);border-top:.5px solid rgba(207,198,180,.18)}
+.nav .in{max-width:1180px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;
+  gap:0;justify-content:center}
+.nav a{position:relative;color:#ddd5c4;text-decoration:none;font-size:13px;font-weight:400;
+  letter-spacing:.16em;text-transform:uppercase;padding:19px 26px 18px;
+  border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.nav a+a::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:1px;height:12px;background:rgba(207,198,180,.22)}
+.nav a:hover{color:#fff}
+.nav a.on{color:#fff;border-bottom-color:var(--gold-l)}
+
+/* ヒーロー */
+.hero{position:relative;height:620px;overflow:hidden;background:var(--stone-700)}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.hero .ov{position:absolute;inset:0;color:#fff;
+  padding:0 max(28px,calc((100% - 1100px)/2)) 58px;
+  background:linear-gradient(rgba(20,18,14,.05) 0%,rgba(20,18,14,.16) 40%,rgba(20,18,14,.80) 100%);
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;text-align:left}
+.hero h1{font-family:"Cormorant Garamond",serif;font-size:62px;font-weight:300;letter-spacing:.16em;
+  margin:0;text-shadow:0 1px 30px rgba(0,0,0,.5);color:#f7f3ea}
+.hero h1 span{display:block;font-family:"Noto Serif JP",serif;font-size:16px;letter-spacing:.46em;
+  color:var(--stone-300);margin-top:12px;font-weight:400;text-shadow:0 1px 20px rgba(0,0,0,.6)}
+.hero .ln{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:23px;letter-spacing:.02em;
+  margin:24px 0 0;font-weight:300;color:#e8e1d3;text-shadow:0 1px 22px rgba(0,0,0,.6)}
+
+/* 節 */
+.sec{padding:86px 0}
+.sec.tint{background:var(--paper-2)}
+h2{font-family:"Cormorant Garamond",serif;font-size:38px;font-weight:300;letter-spacing:.02em;
+  color:#211e1a;margin:0 0 8px;line-height:1.2;position:relative;padding-top:26px}
+h2::before{content:"";position:absolute;top:0;left:0;width:34px;height:1px;background:var(--gold)}
+.kicker{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--stone-500);margin:0 0 40px}
+p{margin:0 0 20px}
+.lede{font-family:"Cormorant Garamond",serif;font-size:27px;line-height:1.62;font-weight:300;
+  color:#211e1a;margin:0 0 42px}
+.lede b{font-weight:400;font-style:italic}
+
+/* At a glance ― ヘアラインだけで組む */
+.glance{width:100%;border-collapse:collapse;font-size:15px;margin-top:4px;background:none}
+.glance th,.glance td{padding:15px 0 14px;text-align:left;vertical-align:top;
+  border-bottom:.5px solid var(--stone-200)}
+.glance th{width:210px;font-weight:400;color:var(--stone-500);font-size:10.5px;
+  letter-spacing:.22em;text-transform:uppercase;padding-top:18px;background:none}
+.glance td{padding-left:8px}
+.glance .jp{font-size:13px;color:var(--stone-500);display:block;margin-top:2px}
+
+/* 五つの入口 */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:4px;
+  border-top:.5px solid var(--stone-200)}
+.cards a{display:block;text-decoration:none;color:var(--ink);padding:36px 34px 34px;
+  border-bottom:.5px solid var(--stone-200);transition:.25s;position:relative}
+.cards a:nth-child(odd){border-right:.5px solid var(--stone-200)}
+.cards a:hover{background:rgba(160,150,130,.07)}
+.cards h3{font-family:"Cormorant Garamond",serif;font-size:29px;font-weight:300;color:#211e1a;
+  margin:0 0 8px;letter-spacing:.02em;line-height:1.2}
+.cards h3 em{font-family:"Noto Serif JP",serif;font-size:14px;font-style:normal;
+  color:var(--stone-400);margin-left:10px}
+.cards p{font-size:14.5px;margin:0;line-height:1.78;color:var(--stone-600)}
+.cards .arw{display:inline-block;margin-top:16px;font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold)}
+.cards a.wide{grid-column:1/-1;border-right:0}
+.minor{display:flex;flex-wrap:wrap;gap:12px 36px;justify-content:center;margin-top:44px}
+.minor a{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--stone-600);
+  text-decoration:none;border-bottom:1px solid var(--stone-200);padding-bottom:5px;transition:.2s}
+.minor a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* 三つの意外 */
+.exp{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:10px}
+.exp .n{font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--gold);line-height:1;
+  margin-bottom:16px;letter-spacing:.2em}
+.exp h3{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:300;color:#211e1a;
+  margin:0 0 12px;line-height:1.3}
+.exp p{font-size:14.5px;line-height:1.82;margin:0 0 14px;color:var(--stone-600)}
+.exp img{aspect-ratio:4/3;object-fit:cover;margin-bottom:22px;width:100%}
+
+/* 春夏秋冬 */
+.seasons .sgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:.5px solid var(--stone-200);margin-top:4px}
+.seasons article{border-bottom:.5px solid var(--stone-200);
+  border-right:.5px solid var(--stone-200);padding:0 0 30px}
+.seasons article:last-child{border-right:0}
+.seasons img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.seasons .lab{display:flex;align-items:baseline;gap:12px;padding:24px 22px 8px}
+.seasons .kj{font-family:"Noto Serif JP",serif;font-size:30px;font-weight:400;color:#211e1a;
+  line-height:1;letter-spacing:.08em}
+.seasons .en{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+.seasons p{font-size:14px;line-height:1.82;color:var(--stone-600);margin:0 0 12px;padding:0 22px}
+.seasons p.ev{font-size:13px;color:var(--stone-500);border-top:.5px solid var(--stone-200);
+  margin:16px 22px 0;padding:14px 0 0}
+.seasons p.ev b{display:block;color:var(--stone-700);font-weight:500;
+  font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:5px}
+.seasons .close{margin-top:44px;font-family:"Cormorant Garamond",serif;font-size:22px;
+  line-height:1.65;color:#211e1a;font-weight:300}
+@media(max-width:860px){
+  .seasons .sgrid{grid-template-columns:repeat(2,1fr)}
+  .seasons article:nth-child(2n){border-right:0}
+  .seasons img{aspect-ratio:4/3}
+}
+@media(max-width:520px){
+  .seasons .sgrid{grid-template-columns:1fr}
+  .seasons article{border-right:0}
+}
+
+/* Before you come */
+.before{background:var(--stone-800);color:var(--stone-200);padding:78px 0}
+.before h2{color:#f3eee3}
+.before h2::before{background:var(--gold-l)}
+.before .kicker{color:var(--stone-400)}
+.before p{font-size:16px;line-height:1.95;color:var(--stone-200)}
+.before a{color:var(--gold-l)}
+.mail{display:inline-block;margin-top:14px;border:.5px solid rgba(207,198,180,.4);
+  padding:15px 38px;color:#f3eee3;text-decoration:none;font-size:13px;letter-spacing:.14em;transition:.2s}
+.mail:hover{background:var(--stone-200);color:var(--stone-900);border-color:var(--stone-200)}
+
+/* フッター */
+.ft{background:var(--stone-900);color:var(--stone-300);padding:64px 28px 46px;text-align:center;
+  font-size:13px;line-height:2.05;letter-spacing:.02em}
+.ft .nm{font-family:"Cormorant Garamond",serif;font-size:24px;letter-spacing:.26em;color:#f3eee3;
+  margin-bottom:6px;font-weight:300}
+.ft .nm span{font-family:"Noto Serif JP",serif;font-size:12px;letter-spacing:.24em;
+  color:var(--stone-400);display:block;margin-top:8px}
+.ft a{color:var(--stone-200)}
+.ft .lk{margin-top:32px;padding-top:28px;border-top:.5px solid rgba(207,198,180,.18);
+  display:flex;flex-wrap:wrap;gap:14px 30px;justify-content:center}
+.ft .lk a{font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  color:#cfc6b4;transition:.2s}
+.ft .lk a:hover{color:#fff}
+.ft .cp{margin-top:32px;font-size:10px;color:var(--stone-600);letter-spacing:.14em}
+
+/* 注釈 */
+.anno{display:none}
+body.show-anno .anno{display:block}
+.anno{background:none;border-left:2px solid var(--gold);padding:10px 0 10px 18px;margin:26px 0;
+  font-size:13px;line-height:1.9;color:var(--stone-600);
+  font-family:"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif}
+.anno b{color:var(--stone-800)}
+.annobar{position:fixed;right:16px;bottom:16px;z-index:10000}
+.annobar button{background:var(--stone-800);color:var(--stone-200);border:0;padding:12px 20px;
+  font-size:12px;letter-spacing:.08em;cursor:pointer;
+  font-family:"Hiragino Kaku Gothic ProN",sans-serif;box-shadow:0 2px 16px rgba(0,0,0,.35)}
+body.show-anno .annobar button{background:var(--gold);color:#fff}
+
+@media(max-width:860px){
+  .hero{height:420px}.hero h1{font-size:36px}.hero .ln{font-size:18px}
+  h2{font-size:27px}.lede{font-size:21px}
+  .cards{grid-template-columns:1fr}
+  .cards a:nth-child(odd){border-right:0}
+  .exp{grid-template-columns:1fr;gap:34px}
+  .glance th{width:130px}.sec{padding:54px 0}
+  .hd .in{flex-direction:column;gap:14px}  .nav .in{gap:0;padding:0 10px}
+  .nav a{font-size:11.5px;letter-spacing:.06em;padding:13px 11px 12px}
+  .nav a+a::before{height:10px}
+}
+</style>
+<link rel="icon" href="/en/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/en/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/en/apple-touch-icon.png">
+<meta name="theme-color" content="#26231f">
+<meta name="robots" content="noindex,nofollow,noarchive">
+
+<style id="proto-banner-css">
+.proto-bar{position:fixed;top:0;left:0;right:0;z-index:100000;background:#9a7a38;color:#fff;
+  font:500 12px/1 "Noto Sans JP","Hiragino Kaku Gothic ProN",sans-serif;letter-spacing:.06em;
+  display:flex;align-items:center;justify-content:center;gap:14px;height:30px;padding:0 12px;
+  box-shadow:0 1px 8px rgba(0,0,0,.18)}
+.proto-bar b{font-weight:700;letter-spacing:.2em}
+.proto-bar a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+html{scroll-padding-top:30px} body{padding-top:30px !important}
+@media(max-width:560px){.proto-bar{font-size:10.5px;gap:8px}.proto-bar .hide-s{display:none}}
+</style>
+</head>
+<body>
+<div class="proto-bar"><b>試作 PROTOTYPE</b><span>公式サイトではありません<span class="hide-s">／Not the official website</span></span><a href="/">一覧へ</a></div>
+
+<header class="hd">
+  <div class="in">
+    <div class="bm">SEIUNJI<span>天目山 栖雲寺</span></div>
+    <a class="ja" href="/ja/">日本語</a>
+  </div>
+</header>
+<nav class="nav"><div class="in">
+  <a href="/en/visit/">Visit</a>
+  <a href="/en/zazen/">Zazen</a>
+  <a href="/en/stay/">Stay</a>
+  <a href="/en/treasures/">Treasures</a>
+  <a href="/en/booking/">Booking</a>
+</div></nav>
+
+<section class="hero">
+  <img src="assets/hero.jpg" alt="The stone garden of Seiunji seen from above, with a single monk sitting zazen on one of the boulders">
+  <div class="ov">
+    <h1>Seiunji<span>栖 雲 寺</span></h1>
+    <p class="ln">The garden is not in front of the temple. The garden <em>is</em> the temple.</p>
+  </div>
+</section>
+
+<!-- ============ What Seiunji is ============ -->
+<section class="sec"><div class="wrap">
+  <p class="lede">A temple made of stone. The garden is not an object placed in front of the hall — the garden <b>is</b> the temple, a slope of granite boulders at 1,050 metres where monks have sat since the fourteenth century. People still sit on those rocks. That is the whole point of the place.</p>
+
+  <h2>What Seiunji is</h2>
+  <p class="kicker">Founded 1348</p>
+  <p>Tenmokusan Seiunji 天目山栖雲寺 is a temple of the <strong>Rinzai school of Zen, Kenchōji branch</strong> (臨済宗建長寺派), founded in <strong>1348</strong> by the monk <strong>Gōkai Honjō 業海本浄</strong>.</p>
+  <p>Gōkai crossed to Yuan-dynasty China in <strong>1318</strong> and studied under <strong>Zhongfeng Mingben 中峰明本</strong> on Mt. Tianmu 天目山, near Hangzhou. He returned to Japan in <strong>1326</strong>. Where he went for the next twenty-two years is unknown. In 1348 he settled in this valley in Yamanashi, which resembled the Tianmu he had left behind, and named the mountain after it.</p>
+  <p>He did not build a monastery and then add a garden. He took the mountainside itself — the boulders, the caves, the trees — as the training hall. The forms of sitting practised here are named for that: <strong>rock zazen</strong> (岩坐禅), <strong>cave zazen</strong> (岩窟坐禅), and <strong>sitting beneath the trees</strong> (樹下坐禅).</p>
+  <p>Kyoto and Kamakura hold some of the greatest Zen architecture in the world, and they are worth every hour you give them. Seiunji offers something different and much smaller: a temple where the practice, not the building, is the thing on display — and where you are expected to join it rather than photograph it.</p>
+</div></section>
+
+<!-- ============ At a glance ============ -->
+<section class="sec tint"><div class="wrap">
+  <h2>At a glance</h2>
+  <p class="kicker">Practical information</p>
+  <table class="glance">
+    <tr><th>Name</th><td>Tenmokusan Seiunji <span class="jp">天目山栖雲寺</span></td></tr>
+    <tr><th>School</th><td>Rinzai Zen, Kenchōji branch <span class="jp">臨済宗建長寺派</span></td></tr>
+    <tr><th>Founded</th><td>1348 (Jōwa 4), by Gōkai Honjō</td></tr>
+    <tr><th>Elevation</th><td>1,050 m</td></tr>
+    <tr><th>Address</th><td>122 Tokusa, Yamato-chō, Kōshū City, Yamanashi 409-1201, Japan
+      <span class="jp">〒409-1201 山梨県甲州市大和町木賊122</span></td></tr>
+    <tr><th>Phone</th><td>+81 553-48-2797 <span class="jp">（国内 0553-48-2797）</span></td></tr>
+    <tr><th>Email</th><td><a href="mailto:tenmokusan@gmail.com">tenmokusan@gmail.com</a></td></tr>
+    <tr><th>Stone garden</th><td>Open daily, 8:00–17:00</td></tr>
+    <tr><th>Admission</th><td><strong>¥300</strong>, self-service honour box — no staff on duty, cash only</td></tr>
+    <tr><th>Nearest station</th><td>Kai-Yamato 甲斐大和 (JR Chūō Main Line), then about 15 min by Kōshū City bus to the last stop, Tenmoku 天目</td></tr>
+  </table>
+</div></section>
+
+<!-- ============ What you can do ============ -->
+<section class="sec"><div class="wrap">
+  <h2>What you can do here</h2>
+  <p class="kicker">Five ways to visit</p>
+  <div class="cards">
+    <a href="/en/visit/">
+      <h3>Visit the stone garden</h3>
+      <p>Open every day, 8:00 to 17:00. About thirty minutes to walk. ¥300 in the honour box at the entrance. No booking, no ticket desk, usually no one there but you.</p>
+      <span class="arw">Visiting →</span></a>
+    <a href="/en/zazen/">
+      <h3>Sit zazen<em>坐禅</em></h3>
+      <p>A monthly sitting on the last Sunday of each month, open to beginners, no reservation needed. Longer <strong>Genjū retreats</strong> 幻住坐禅会 of one or two days, several times a year, limited to fifteen people.</p>
+      <span class="arw">Zazen &amp; retreats →</span></a>
+    <a href="/en/stay/">
+      <h3>Stay overnight</h3>
+      <p>Lodging inside the temple — eleven places, <strong>shared sleeping space separated by gender, bring your own sleeping bag</strong> — or temple camping in the grounds, one group per night, firewood included.</p>
+      <span class="arw">Staying →</span></a>
+    <a href="/en/treasures/">
+      <h3>See the treasures</h3>
+      <p>A seated statue of Zhongfeng Mingben designated an <strong>Important Cultural Property of Japan</strong>; the iron war fan of Takeda Shingen; and a <strong>Yuan-dynasty painting on silk of a figure holding a cross</strong>, designated by Yamanashi Prefecture as a Manichaean image.</p>
+      <span class="arw">Treasures &amp; history →</span></a>
+    <a class="wide" href="/en/booking/">
+      <h3>Book a retreat or an experience</h3>
+      <p>Zazen, sutra copying, temple cleaning, soba making, a meal taken in the monastic form. Sessions from sixty minutes, up to twenty people. Reservation required.</p>
+      <span class="arw">Booking &amp; fees →</span></a>
+  </div>
+  <div class="minor">
+    <a href="/en/access/">Getting here</a>
+    <a href="/en/etiquette/">Etiquette &amp; what to bring</a>
+    <a href="/en/faq/">FAQ</a>
+    <a href="https://www.tenmokusan.or.jp/cn8/welfare.html">Essays</a>
+  </div>
+</div></section>
+
+<!-- ============ Three things ============ -->
+<section class="sec tint"><div class="wrap">
+  <h2>Three things visitors usually do not expect</h2>
+  <p class="kicker">Before you decide to come</p>
+  <div class="exp">
+    <div>
+      <img src="assets/garden-boulders.jpg" alt="Boulders in the mist at Seiunji">
+      <div class="n">1</div>
+      <h3>It is a working training temple, not a museum.</h3>
+      <p>Nothing here is staged for visitors. On most days the stone garden is unattended; you pay into a box and walk in.</p>
+      <p>On retreat days, guests join the same schedule as everyone else — including <strong>samu 作務</strong>, the work practice, which in plain terms means cleaning floors.</p>
+    </div>
+    <div>
+      <img src="assets/kuri-interior.jpg" alt="The kuri quarters rebuilt in 1592">
+      <div class="n">2</div>
+      <h3>The mountain has a history of violence.</h3>
+      <p>Seiunji is the memorial temple of the Takeda clan. In 1582, with Oda forces closing in, the last lord <strong>Takeda Katsuyori</strong> fled toward Tenmokuzan and took his own life at Tano, ending the clan. <strong>By the temple’s own tradition</strong> he was making for Seiunji and turned back because it had already been burned — a detail the period chronicles do not record.</p>
+      <p>The kitchen-quarters (<strong>kuri</strong> 庫裏) standing today were rebuilt in 1592 with land granted by Tokugawa Ieyasu.</p>
+    </div>
+    <div>
+      <img src="assets/soba-kenchin.jpg" alt="Hand-cut soba noodles and kenchin soup">
+      <div class="n">3</div>
+      <h3>According to temple tradition, this is where soba noodles began.</h3>
+      <p>The temple claims to be the birthplace of <strong>soba-kiri</strong> 蕎麦切り — cut buckwheat noodles — on the strength of a passage in <em>Shiojiri</em> 塩尻 by the Owari retainer Amano Sadakage, and a tradition that Gōkai brought the technique back from Hangzhou.</p>
+      <p>It is a tradition, not a settled historical fact, and we present it as such. The soba festival each November is real enough.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 春夏秋冬 ============ -->
+<section class="sec seasons"><div class="wrap">
+  <h2>The mountain through the year</h2>
+  <p class="kicker">Spring · Summer · Autumn · Winter</p>
+  <div class="sgrid">
+    <article>
+      <img src="assets/shidare-zakura.jpg" alt="The weeping cherry in full bloom above the stone Kannon">
+      <div class="lab"><span class="kj">春</span><span class="en">Spring</span></div>
+      <p>The weeping cherry comes out above the stone Kannon. The valley is a fortnight behind Tokyo, so the blossom is late here.</p>
+      <p class="ev"><b>What happens</b>In March the temple sows buckwheat and the priest cuts ten-parts soba. The Marishiten festival falls on a Sunday in mid-April, when the shrine is opened.</p>
+    </article>
+    <article>
+      <img src="assets/garden-boulders.jpg" alt="Moss and green shade among the boulders in summer">
+      <div class="lab"><span class="kj">夏</span><span class="en">Summer</span></div>
+      <p>Moss closes over the granite and the whole slope goes green. At 1,050 metres it stays cool when the plain below does not — this is the best season to sit outside for an hour.</p>
+      <p class="ev"><b>What happens</b>A tea gathering in the green shade at the end of May, and another on the first Sunday of June. The founder is remembered on 27 July.</p>
+    </article>
+    <article>
+      <img src="assets/autumn-fuji.jpg" alt="Autumn maples with Mt. Fuji beyond">
+      <div class="lab"><span class="kj">秋</span><span class="en">Autumn</span></div>
+      <p>Maples turn against Mt. Fuji, which stands clear of the ridge on cold mornings. The gorge trail from the station is at its best.</p>
+      <p class="ev"><b>What happens</b>7–8 November: the soba festival, and the airing of the treasures — <strong>the one occasion in the year the temple’s treasures are shown</strong>. The Manichaean goshuin is issued on those two days only.</p>
+    </article>
+    <article>
+      <img src="assets/winter-zen.jpg" alt="Snow lying on the boulders of the Zen garden">
+      <div class="lab"><span class="kj">冬</span><span class="en">Winter</span></div>
+      <p>Snow lies on the boulders and the slope goes quiet. Sitting does not stop. Very few people come, which is the argument for coming.</p>
+      <p class="ev"><b>What happens</b>Zazen at Daibosatsu Pass in December. Note that the seasonal mountain bus does not run from mid-December to mid-April — use the city bus, which runs all year.</p>
+    </article>
+  </div>
+  <p class="close">The garden is open every day of the year.<br>
+  If you are free to choose when to come, choose a quiet month.</p>
+</div></section>
+
+<!-- ============ Before you come ============ -->
+<section class="before"><div class="wrap">
+  <h2>Before you come</h2>
+  <p class="kicker">Please read</p>
+  <p>The temple is at 1,050 m in the mountains. It is colder than Tokyo year-round, <strong>the last bus is early</strong>, and there are no shops at the stop.</p>
+  <p>Please read <a href="/en/access/">Getting here</a> and <a href="/en/etiquette/">Etiquette &amp; what to bring</a> before you set out.</p>
+  <p style="margin-top:26px"><strong>Questions in English are welcome by email. We reply in English.</strong><br>
+  Please write rather than telephone — the temple is not always attended, and a written enquiry is easier for us to answer properly.</p>
+  <a class="mail" href="mailto:tenmokusan@gmail.com">tenmokusan@gmail.com</a>
+</div></section>
+
+<!-- ============ Footer ============ -->
+<footer class="ft">
+  <div class="nm">SEIUNJI<span>臨済宗建長寺派　天目山　栖雲寺</span></div>
+  122 Tokusa, Yamato-chō, Kōshū City, Yamanashi 409-1201, Japan<br>
+  〒409-1201 山梨県甲州市大和町木賊122<br>
+  +81 553-48-2797　／　<a href="mailto:tenmokusan@gmail.com">tenmokusan@gmail.com</a><br>
+  Stone garden open daily 8:00–17:00　／　Admission ¥300 (cash, honour box)
+  <div class="lk">
+    <a href="/en/visit/">Visit</a><a href="/en/access/">Getting here</a><a href="/en/zazen/">Zazen</a>
+    <a href="/en/stay/">Stay</a><a href="/en/treasures/">Treasures</a><a href="/en/etiquette/">Etiquette</a>
+    <a href="/en/faq/">FAQ</a><a href="/en/booking/">Booking</a>
+    <a href="#">Google Maps</a><a href="/ja/">日本語</a>
+  </div>
+  <div class="cp">(C) 2020 SEIUNJI ALL RIGHTS RESERVED.</div>
+</footer>
+
+</body>
+</html>
